@@ -17,15 +17,50 @@
 
 package de.pro.properties;
 
+import de.pro.logger.api.LoggerFactory;
 import de.pro.properties.api.IProperties;
+import java.io.IOException;
+import java.util.Properties;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableMap;
 
 /**
  *
  * @author PRo
  */
 public class PRoProperties implements IProperties {
+    
+    private final ObservableMap<String, Properties> allProperties = FXCollections.observableHashMap();
 
     public PRoProperties() {
     }
-    
+
+    @Override
+    public String getProperty(String bundle, String key) {
+        return allProperties.get(bundle).getProperty(key);
+    }
+
+    @Override
+    public String getProperty(String bundle, String key, String defaultValue) {
+        return allProperties.get(bundle).getProperty(key, defaultValue);
+    }
+
+    @Override
+    public void register(String bundle) {
+        if (allProperties.containsKey(bundle)) {
+            return;
+        }
+        
+        try {
+            final Properties properties = new Properties();
+            properties.load(this.getClass().getResourceAsStream(bundle));
+            allProperties.put(bundle, properties);
+            
+            LoggerFactory.getDefault().debug(this.getClass(),
+                    String.format("Load properties: %s", bundle)); // NOI18N
+        } catch (IOException ex) {
+            LoggerFactory.getDefault().error(this.getClass(),
+                    String.format("Can't load properties: %s", bundle), ex); // NOI18N
+        }
+    }
 }
