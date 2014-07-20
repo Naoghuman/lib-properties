@@ -36,31 +36,31 @@ public class PRoProperties implements IProperties {
     }
 
     @Override
-    public String getProperty(String bundle, String key) {
-        return allProperties.get(bundle).getProperty(key);
+    public String getProperty(String pathWithBundle, String key) {
+        return allProperties.get(pathWithBundle).getProperty(key);
     }
 
     @Override
-    public String getProperty(String bundle, String key, String defaultValue) {
-        return allProperties.get(bundle).getProperty(key, defaultValue);
+    public String getProperty(String pathWithBundle, String key, String defaultValue) {
+        return allProperties.get(pathWithBundle).getProperty(key, defaultValue);
     }
 
     @Override
-    public void register(String bundle) {
-        if (allProperties.containsKey(bundle)) {
+    public void register(String pathWithBundle) {
+        if (allProperties.containsKey(pathWithBundle)) {
             return;
         }
         
         try {
             final Properties properties = new Properties();
-            properties.load(this.getClass().getResourceAsStream(bundle));
-            allProperties.put(bundle, properties);
+            properties.load(this.getClass().getResourceAsStream(pathWithBundle));
+            allProperties.put(pathWithBundle, properties);
             
             LoggerFactory.getDefault().debug(this.getClass(),
-                    String.format("Load properties: %s", bundle)); // NOI18N
+                    String.format("Load properties: %s", pathWithBundle)); // NOI18N
         } catch (IOException ex) {
             LoggerFactory.getDefault().error(this.getClass(),
-                    String.format("Can't load properties: %s", bundle), ex); // NOI18N
+                    String.format("Can't load properties: %s", pathWithBundle), ex); // NOI18N
         }
     }
 }

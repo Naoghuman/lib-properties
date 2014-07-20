@@ -22,19 +22,19 @@ package de.pro.properties.api;
  * @author PRo
  */
 public interface IProperties {
-    public String getProperty(String bundle, String key);
-    public String getProperty(String bundle, String key, String defaultValue);
+    public String getProperty(String pathWithBundle, String key);
+    public String getProperty(String pathWithBundle, String key, String defaultValue);
     
     /**
-     * Register with this methode our <code>.properties</code> file. The parameter 
-     * <code>bundle</code> have the format:<br />
-     * <code>/your/package/path/to/your/bundle.properties</code><br /><br />
+     * Register with this method your <code>.properties</code> file. The parameter 
+     * <code>pathWithBundle</code> have the format:<br />
+     * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
      * 
-     * The file should be in the <code>src/main/resources</code> folder in the 
-     * specific maven module.
+     * The file should be in the <code>src/main/resources</code> folder with the 
+     * previous named packaged structur in the specific maven module.
      * 
-     * @param bundle The properties which should be register. If the properties 
-     * always register nothing happen.
+     * @param pathWithBundle The properties which should be register. If the 
+     * properties always register nothing happen.
      */
-    public void register(String bundle);
+    public void register(String pathWithBundle);
 }
