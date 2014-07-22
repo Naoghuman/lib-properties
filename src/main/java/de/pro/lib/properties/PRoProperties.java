@@ -15,10 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.pro.properties;
+package de.pro.lib.properties;
 
-import de.pro.logger.api.LoggerFactory;
-import de.pro.properties.api.IProperties;
+import de.pro.lib.logger.api.LoggerFactory;
+import de.pro.lib.properties.api.IProperties;
 import java.io.IOException;
 import java.util.Properties;
 import javafx.collections.FXCollections;

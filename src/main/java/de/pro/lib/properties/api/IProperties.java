@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.pro.properties.api;
+package de.pro.lib.properties.api;
 
 /**
  *

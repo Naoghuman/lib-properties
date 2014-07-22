@@ -1,4 +1,4 @@
-PRo-Properties
+Lib-Properties
 ==============
 
 A library for `easy` loading [properties](http://en.wikipedia.org/wiki/.properties) in a [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm) &amp; [Maven](http://maven.apache.org/) application.
