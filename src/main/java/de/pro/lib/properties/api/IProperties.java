@@ -18,11 +18,39 @@
 package de.pro.lib.properties.api;
 
 /**
+ * The <code>Interface</code> for the class <code>de.pro.lib.properties.PRoProperties</code>.
+ * Over the factory <code>de.pro.lib.properties.api.PropertiesFactory</code> you can 
+ * access the methods in this <code>Interface</code>.
  *
  * @author PRo
+ * @see de.pro.lib.properties.PRoProperties
+ * @see de.pro.lib.properties.api.PropertiesFactory
  */
 public interface IProperties {
+    /**
+     * Searches for the property with the specified key in this property list.
+     * If the key is not found in this property list, the default property list,
+     * and its defaults, recursively, are then checked. The method returns
+     * {@code null} if the property is not found.
+     * 
+     * @param pathWithBundle The properties where value is stored.
+     * @param key The property key.
+     * @return The value in this property list with the specified key value.
+     */
     public String getProperty(String pathWithBundle, String key);
+    
+    /**
+     * Searches for the property with the specified key in this property list.
+     * If the key is not found in this property list, the default property list,
+     * and its defaults, recursively, are then checked. The method returns the
+     * default value argument if the property is not found.
+     * 
+     * @param pathWithBundle The properties where value is stored.
+     * @param key The property key.
+     * @param defaultValue If the key-value pair not stored in the properties
+     * then the <code>defaultValue</code> will be returned.
+     * @return The value in this property list with the specified key value.
+     */
     public String getProperty(String pathWithBundle, String key, String defaultValue);
     
     /**

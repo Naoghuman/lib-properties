@@ -19,13 +19,22 @@ package de.pro.lib.properties.api;
 import de.pro.lib.properties.PRoProperties;
 
 /**
+ * The factory <code>de.pro.lib.properties.api.PropertiesFactory</code> provides a 
+ * singleton instance of the Interface <code>de.pro.lib.properties.api.IProperties</code>.
  *
  * @author PRo
+ * @see de.pro.lib.preferences.api.IPreferences
  */
 public final class PropertiesFactory {
     
     private static IProperties instance = null;
     
+    /**
+     * Provides a singleton instance from the Interface <code>de.pro.lib.properties.api.IProperties</code>.
+     * 
+     * @return A singleton instance of <code>de.pro.lib.properties.api.IProperties</code>.
+     * @see de.pro.lib.properties.api.IProperties
+     */
     public static IProperties getDefault() {
         
         if (instance == null) {

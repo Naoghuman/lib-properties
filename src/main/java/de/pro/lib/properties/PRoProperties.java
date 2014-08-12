@@ -25,15 +25,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
 
 /**
- *
+ * The implementation from the Interface <code>de.pro.lib.properties.api.IProperties</code>.
+ * 
  * @author PRo
+ * @see de.pro.lib.properties.api.IProperties
  */
 public class PRoProperties implements IProperties {
     
     private final ObservableMap<String, Properties> allProperties = FXCollections.observableHashMap();
-
-    public PRoProperties() {
-    }
 
     @Override
     public String getProperty(String pathWithBundle, String key) {
