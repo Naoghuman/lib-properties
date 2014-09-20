@@ -19,20 +19,20 @@ package de.pro.lib.properties.api;
 import de.pro.lib.properties.PRoProperties;
 
 /**
- * The factory <code>de.pro.lib.properties.api.PropertiesFactory</code> provides a 
- * singleton instance of the Interface <code>de.pro.lib.properties.api.IProperties</code>.
+ * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides a 
+ * singleton instance of the Interface {@link de.pro.lib.properties.api.IProperties}.
  *
  * @author PRo
- * @see de.pro.lib.preferences.api.IPreferences
+ * @see de.pro.lib.properties.api.IProperties
  */
-public final class PropertiesFactory {
+public final class PropertiesFacade {
     
     private static IProperties instance = null;
     
     /**
-     * Provides a singleton instance from the Interface <code>de.pro.lib.properties.api.IProperties</code>.
+     * Provides a singleton instance from the Interface {@link de.pro.lib.properties.api.IProperties}.
      * 
-     * @return A singleton instance of <code>de.pro.lib.properties.api.IProperties</code>.
+     * @return A singleton instance of {@link de.pro.lib.properties.api.IProperties}.
      * @see de.pro.lib.properties.api.IProperties
      */
     public static IProperties getDefault() {
@@ -44,5 +44,5 @@ public final class PropertiesFactory {
         return instance;
     }
     
-    private PropertiesFactory() { }
+    private PropertiesFacade() { }
 }

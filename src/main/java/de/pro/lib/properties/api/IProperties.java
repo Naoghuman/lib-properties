@@ -18,13 +18,13 @@
 package de.pro.lib.properties.api;
 
 /**
- * The <code>Interface</code> for the class <code>de.pro.lib.properties.PRoProperties</code>.
- * Over the factory <code>de.pro.lib.properties.api.PropertiesFactory</code> you can 
+ * The <code>Interface</code> for the class {@link de.pro.lib.properties.PRoProperties}.
+ * Over the facade {@link de.pro.lib.properties.api.PropertiesFacade} you can 
  * access the methods in this <code>Interface</code>.
  *
  * @author PRo
  * @see de.pro.lib.properties.PRoProperties
- * @see de.pro.lib.properties.api.PropertiesFactory
+ * @see de.pro.lib.properties.api.PropertiesFacade
  */
 public interface IProperties {
     /**

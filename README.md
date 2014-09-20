@@ -4,7 +4,7 @@ Lib-Properties
 A library for `easy` loading [properties] in a [JavaFX] &amp; [Maven] application.
 
 
-Current `version` is `0.0.2-SNAPSHOT` (08.2014).
+Current `version` is `0.0.2` (09.2014).
 
 
 
@@ -27,13 +27,13 @@ Example<a name="Example" />
 
 ```java
 /**
- * The factory <code>de.pro.lib.properties.api.PropertiesFactory</code> provides a 
- * singleton instance of the Interface <code>de.pro.lib.properties.api.IProperties</code>.
+ * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides a 
+ * singleton instance of the Interface {@link de.pro.lib.action.PRoAction}.
  *
  * @author PRo
  * @see de.pro.lib.preferences.api.IPreferences
  */
-public final class PropertiesFactory 
+public final class PropertiesFacacde
 ```
 
 ```java
@@ -48,7 +48,7 @@ public final class PropertiesFactory
  * @param pathWithBundle The properties which should be register. If the 
  * properties always register nothing happen.
  */
-PropertiesFactory.getDefault().register(String pathWithBundle);
+PropertiesFacacde.getDefault().register(String pathWithBundle);
 ```
 
 ```java
@@ -62,7 +62,7 @@ PropertiesFactory.getDefault().register(String pathWithBundle);
  * @param key The property key.
  * @return The value in this property list with the specified key value.
  */
-PropertiesFactory.getDefault().getProperty(String pathWithBundle, String key);
+PropertiesFacacde.getDefault().getProperty(String pathWithBundle, String key);
 ```
 
 ```java
@@ -78,7 +78,7 @@ PropertiesFactory.getDefault().getProperty(String pathWithBundle, String key);
  * then the <code>defaultValue</code> will be returned.
  * @return The value in this property list with the specified key value.
  */
-PropertiesFactory.getDefault().getProperty(String pathWithBundle, String key, String defaultValue);
+PropertiesFacacde.getDefault().getProperty(String pathWithBundle, String key, String defaultValue);
 ```
 
 
@@ -86,10 +86,10 @@ Requirements<a name="Requirements" />
 ------------
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Properties-0.0.2-SNAPSHOT.jar](#Installation).
-* The library [Lib-Logger-0.0.2-SNAPSHOT.jar](#Installation).
-  * Included is the [log4j-api-2.0.jar].
-  * Included is the [log4j-core-2.0.jar].
+* The library [Lib-Properties-0.0.2.jar](#Installation).
+* The library [Lib-Logger-0.0.3.jar](#Installation).
+  * Included is the [log4j-api-2.0.2.jar].
+  * Included is the [log4j-core-2.0.2.jar].
 
 
 
@@ -115,7 +115,7 @@ Momentary only the [JavaDoc] in the library itself is available.
 Contribution<a name="Contribution" />
 ------------
 
-* If you find a bug I will be glad if you will report an [Issue].
+* If you find a `Bug` I will be glad if you could report an [Issue].
 * If you want to contribute to the project plz fork the project and do a [Pull Request].
 
 
@@ -123,14 +123,14 @@ Contribution<a name="Contribution" />
 License<a name="License" />
 -------
 
-Lib-Properties is licensed under [General Public License 3.0].
+The project `Lib-Properties` is licensed under [General Public License 3.0].
 
 
 
 Autor<a name="Autor" />
 ----
 
-Lib-Properties is maintained by me, Peter Rogge. See [Contact](#Contact).
+The project `Lib-Properties` is maintained by me, Peter Rogge. See [Contact](#Contact).
 
 
 
@@ -153,8 +153,8 @@ You can reach me under <peter.rogge@yahoo.de>.
 [JRE 8]:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [Lib-Properties]:https://github.com/Naoghuman/lib-properties
 [Lib-Logger]:https://github.com/Naoghuman/lib-logger
-[log4j-api-2.0.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
-[log4j-core-2.0.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-api-2.0.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-core-2.0.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Pull Request]:https://help.github.com/articles/using-pull-requests

@@ -17,7 +17,7 @@
 
 package de.pro.lib.properties;
 
-import de.pro.lib.logger.api.LoggerFactory;
+import de.pro.lib.logger.api.LoggerFacade;
 import de.pro.lib.properties.api.IProperties;
 import java.io.IOException;
 import java.util.Properties;
@@ -25,10 +25,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
 
 /**
- * The implementation from the Interface <code>de.pro.lib.properties.api.IProperties</code>.
+ * The implementation from the Interface {@link de.pro.lib.properties.api.IProperties}.<br />
+ * Access to this class is over the facade {@link de.pro.lib.properties.api.PropertiesFacade}.
  * 
  * @author PRo
  * @see de.pro.lib.properties.api.IProperties
+ * @see de.pro.lib.properties.api.PropertiesFacade
  */
 public class PRoProperties implements IProperties {
     
@@ -55,10 +57,10 @@ public class PRoProperties implements IProperties {
             properties.load(this.getClass().getResourceAsStream(pathWithBundle));
             allProperties.put(pathWithBundle, properties);
             
-            LoggerFactory.getDefault().debug(this.getClass(),
+            LoggerFacade.getDefault().debug(this.getClass(),
                     String.format("Load properties: %s", pathWithBundle)); // NOI18N
         } catch (IOException ex) {
-            LoggerFactory.getDefault().error(this.getClass(),
+            LoggerFacade.getDefault().error(this.getClass(),
                     String.format("Can't load properties: %s", pathWithBundle), ex); // NOI18N
         }
     }
