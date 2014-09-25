@@ -18,7 +18,7 @@
 package de.pro.lib.properties.api;
 
 /**
- * The <code>Interface</code> for the class {@link de.pro.lib.properties.PRoProperties}.
+ * The <code>Interface</code> for the class {@link de.pro.lib.properties.PRoProperties}.<br />
  * Over the facade {@link de.pro.lib.properties.api.PropertiesFacade} you can 
  * access the methods in this <code>Interface</code>.
  *
@@ -59,7 +59,7 @@ public interface IProperties {
      * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
      * 
      * The file should be in the <code>src/main/resources</code> folder with the 
-     * previous named packaged structur in the specific maven module.
+     * previous named packaged structure in the specific maven module.
      * 
      * @param pathWithBundle The properties which should be register. If the 
      * properties always register nothing happen.

@@ -28,10 +28,10 @@ Example<a name="Example" />
 ```java
 /**
  * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.action.PRoAction}.
+ * singleton instance of the Interface {@link de.pro.lib.properties.api.IProperties}.
  *
  * @author PRo
- * @see de.pro.lib.preferences.api.IPreferences
+ * @see de.pro.lib.properties.api.IProperties
  */
 public final class PropertiesFacacde
 ```
@@ -43,7 +43,7 @@ public final class PropertiesFacacde
  * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
  * 
  * The file should be in the <code>src/main/resources</code> folder with the 
- * previous named packaged structur in the specific maven module.
+ * previous named packaged structure in the specific maven module.
  * 
  * @param pathWithBundle The properties which should be register. If the 
  * properties always register nothing happen.
@@ -128,13 +128,13 @@ The project `Lib-Properties` is licensed under [General Public License 3.0].
 
 
 Autor<a name="Autor" />
-----
+-----
 
 The project `Lib-Properties` is maintained by me, Peter Rogge. See [Contact](#Contact).
 
 
 
-Contact
+Contact<a name="Contact" />
 -------
 
 You can reach me under <peter.rogge@yahoo.de>.
