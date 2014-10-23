@@ -54,6 +54,28 @@ public interface IProperties {
     public String getProperty(String pathWithBundle, String key, String defaultValue);
     
     /**
+     * Allowed access to the <code>System</code> properties. Gets the system property indicated by the specified key.
+     * <p>
+     * First, if there is a security manager, its <code>checkPropertyAccess</code> 
+     * method is called with the key as its argument. This may result in a SecurityException.
+     * <p>
+     * If there is no current set of system properties, a set of system properties 
+     * is first created and initialized in the same manner as for the 
+     * <code>getProperties</code> method.
+     * 
+     * @param key The name of the system property.
+     * @return The string value of the system property, or <code>null</code> if 
+     * there is no property with that key.
+     * @throws SecurityException  if a security manager exists and its 
+     * <code>checkPropertyAccess</code> method doesn't allow access to the 
+     * specified system property.
+     * @throws NullPointerException If <code>key</code> is <code>null</code>.
+     * @throws IllegalArgumentException If <code>key</code> is empty.
+     * @see #setSystemProperty(java.lang.String, java.lang.String)
+     */
+    public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException;
+    
+    /**
      * Register with this method your <code>.properties</code> file. The parameter 
      * <code>pathWithBundle</code> have the format:<br />
      * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
@@ -65,4 +87,24 @@ public interface IProperties {
      * properties always register nothing happen.
      */
     public void register(String pathWithBundle);
+    
+    /**
+     * Allowed access to the <code>System</code> properties. Sets the system property indicated by the specified key.
+     * <p>
+     * First, if a security manager exists, its <code>SecurityManager.checkPermission</code> 
+     * method is called with a <code>PropertyPermission(key, "write")</code>
+     * permission. This may result in a SecurityException being thrown. If no 
+     * exception is thrown, the specified property is set to the given value.
+     * 
+     * @param key The name of the system property.
+     * @param value The value of the system property.
+     * @throws SecurityException  if a security manager exists and its 
+     * <code>checkPropertyAccess</code> method doesn't allow access to the 
+     * specified system property.
+     * @throws NullPointerException If <code>key</code> or <code>value</code> 
+     * is <code>null</code>.
+     * @throws IllegalArgumentException If <code>key</code> is empty.
+     * @see #getSystemProperty(java.lang.String)
+     */
+    public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException;
 }

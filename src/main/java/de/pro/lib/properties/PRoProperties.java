@@ -45,6 +45,11 @@ public class PRoProperties implements IProperties {
     public String getProperty(String pathWithBundle, String key, String defaultValue) {
         return allProperties.get(pathWithBundle).getProperty(key, defaultValue);
     }
+    
+    @Override
+    public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException {
+        return System.getProperty(key);
+    }
 
     @Override
     public void register(String pathWithBundle) {
@@ -63,5 +68,10 @@ public class PRoProperties implements IProperties {
             LoggerFacade.getDefault().error(this.getClass(),
                     String.format("Can't load properties: %s", pathWithBundle), ex); // NOI18N
         }
+    }
+
+    @Override
+    public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+        System.setProperty(key, value);
     }
 }
