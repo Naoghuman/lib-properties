@@ -20,6 +20,7 @@ package de.pro.lib.properties;
 import de.pro.lib.logger.api.LoggerFacade;
 import de.pro.lib.properties.api.IProperties;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
@@ -80,6 +81,22 @@ public class PRoProperties implements IProperties {
         } catch (IOException ex) {
             LoggerFacade.getDefault().error(this.getClass(),
                     String.format("Can't load properties: %s", pathWithBundle), ex); // NOI18N
+        }
+    }
+
+    @Override
+    public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException {
+        if (unnamed.isEmpty()) {
+            return;
+        }
+        
+        for (String systemProperty : unnamed) {
+            final String[] split = systemProperty.split(regex);
+            if (split.length != 2) {
+                return;
+            }
+            
+            System.setProperty(split[0], split[1]);
         }
     }
 

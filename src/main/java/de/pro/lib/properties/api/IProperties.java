@@ -17,6 +17,8 @@
 
 package de.pro.lib.properties.api;
 
+import java.util.List;
+
 /**
  * The <code>Interface</code> for the class {@link de.pro.lib.properties.PRoProperties}.<br />
  * Over the facade {@link de.pro.lib.properties.api.PropertiesFacade} you can 
@@ -111,6 +113,22 @@ public interface IProperties {
      * properties always register nothing happen.
      */
     public void register(String pathWithBundle);
+    
+    /**
+     * Register the given {@link java.util.List} as <code>System</code> properties.
+     * Every entry in the {@link java.util.List} will splitted with the regex to 
+     * a <code>System</code> property pair (key, value).
+     * 
+     * @param regex The delimiting regular expression.
+     * @param unnamed The {@link java.util.List} which will splitted.
+     * @throws SecurityException If a security manager exists and its 
+     * <code>checkPropertyAccess</code> method doesn't allow access to the 
+     * specified system property.
+     * @throws NullPointerException If <code>key</code> or <code>value</code> 
+     * is <code>null</code>.
+     * @throws IllegalArgumentException If <code>key</code> is empty.
+     */
+    public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException ;
     
     /**
      * Allowed access to the <code>System</code> properties. Sets the system property indicated by the specified key.
