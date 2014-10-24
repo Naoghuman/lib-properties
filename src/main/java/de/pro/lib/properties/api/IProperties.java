@@ -76,6 +76,30 @@ public interface IProperties {
     public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
+     * Allowed access to the <code>System</code> properties. Checks if the system property value equals the parameter value.
+     * <p>
+     * First, if there is a security manager, its <code>checkPropertyAccess</code> 
+     * method is called with the key as its argument. This may result in a SecurityException.
+     * <p>
+     * If there is no current set of system properties, a set of system properties 
+     * is first created and initialized in the same manner as for the 
+     * <code>getProperties</code> method.
+     * 
+     * @param key The name of the system property.
+     * @param value The value which should checked against the value from the 
+     * system.
+     * @return If the value from the key equals the parameter value.
+     * @throws SecurityException  if a security manager exists and its 
+     * <code>checkPropertyAccess</code> method doesn't allow access to the 
+     * specified system property.
+     * @throws NullPointerException If <code>key</code> is <code>null</code>.
+     * @throws IllegalArgumentException If <code>key</code> is empty.
+     * @see #getSystemProperty(java.lang.String)
+     * @see #setSystemProperty(java.lang.String, java.lang.String)
+     */
+    public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException;
+    
+    /**
      * Register with this method your <code>.properties</code> file. The parameter 
      * <code>pathWithBundle</code> have the format:<br />
      * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />

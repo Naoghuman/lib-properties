@@ -52,6 +52,19 @@ public class PRoProperties implements IProperties {
     }
 
     @Override
+    public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+        if (this.getSystemProperty(key) == null) {
+            return Boolean.FALSE;
+        }
+        
+        if (this.getSystemProperty(key).equals(value)) {
+            return Boolean.TRUE;
+        }
+        
+        return Boolean.FALSE;
+    }
+
+    @Override
     public void register(String pathWithBundle) {
         if (allProperties.containsKey(pathWithBundle)) {
             return;
