@@ -38,8 +38,8 @@ public final class PropertiesFacacde
 
 ```java
 /**
- * Register with this method your <code>.properties</code> file. The parameter 
- * <code>pathWithBundle</code> have the format:<br />
+ * Register with this method your <code>.properties</code> file.<br />
+ * The parameter <code>pathWithBundle</code> have the format:<br />
  * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
  * 
  * The file should be in the <code>src/main/resources</code> folder with the 

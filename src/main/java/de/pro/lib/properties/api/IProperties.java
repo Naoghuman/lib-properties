@@ -30,7 +30,7 @@ import java.util.List;
  */
 public interface IProperties {
     /**
-     * Searches for the property with the specified key in this property list.
+     * Searches for the property with the specified key in this property list.<br />
      * If the key is not found in this property list, the default property list,
      * and its defaults, recursively, are then checked. The method returns
      * {@code null} if the property is not found.
@@ -42,7 +42,7 @@ public interface IProperties {
     public String getProperty(String pathWithBundle, String key);
     
     /**
-     * Searches for the property with the specified key in this property list.
+     * Searches for the property with the specified key in this property list.<br />
      * If the key is not found in this property list, the default property list,
      * and its defaults, recursively, are then checked. The method returns the
      * default value argument if the property is not found.
@@ -102,8 +102,8 @@ public interface IProperties {
     public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
-     * Register with this method your <code>.properties</code> file. The parameter 
-     * <code>pathWithBundle</code> have the format:<br />
+     * Register with this method your <code>.properties</code> file.<br />
+     * The parameter <code>pathWithBundle</code> have the format:<br />
      * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
      * 
      * The file should be in the <code>src/main/resources</code> folder with the 
