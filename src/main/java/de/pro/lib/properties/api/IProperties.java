@@ -56,7 +56,8 @@ public interface IProperties {
     public String getProperty(String pathWithBundle, String key, String defaultValue);
     
     /**
-     * Allowed access to the <code>System</code> properties. Gets the system property indicated by the specified key.
+     * Allowed access to the <code>System</code> properties. Gets the system property 
+     * indicated by the specified key.
      * <p>
      * First, if there is a security manager, its <code>checkPropertyAccess</code> 
      * method is called with the key as its argument. This may result in a SecurityException.
@@ -78,7 +79,8 @@ public interface IProperties {
     public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
-     * Allowed access to the <code>System</code> properties. Checks if the system property value equals the parameter value.
+     * Allowed access to the <code>System</code> properties. Checks if the system 
+     * property value equals the parameter value.
      * <p>
      * First, if there is a security manager, its <code>checkPropertyAccess</code> 
      * method is called with the key as its argument. This may result in a SecurityException.
@@ -131,7 +133,8 @@ public interface IProperties {
     public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException ;
     
     /**
-     * Allowed access to the <code>System</code> properties. Sets the system property indicated by the specified key.
+     * Allowed access to the <code>System</code> properties. Sets the system property 
+     * indicated by the specified key.
      * <p>
      * First, if a security manager exists, its <code>SecurityManager.checkPermission</code> 
      * method is called with a <code>PropertyPermission(key, "write")</code>
