@@ -4,7 +4,7 @@ Lib-Properties
 A library for `easy` loading [properties] in a [JavaFX] &amp; [Maven] application.
 
 
-Current `version` is `0.0.6` (12.2014).
+Current `version` is `0.1.0` (03.2015).
 
 
 
@@ -86,7 +86,7 @@ Requirements<a name="Requirements" />
 ------------
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Properties-0.0.6.jar](#Installation).
+* The library [Lib-Properties-0.1.0.jar](#Installation).
 * The library [Lib-Logger-0.1.0.jar](#Installation).
   * Included is the [log4j-api-2.2.jar].
   * Included is the [log4j-core-2.2.jar].
