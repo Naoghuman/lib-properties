@@ -11,7 +11,7 @@ Current `version` is `0.1.0` (03.2015).
 Content
 -------
 
-* [Example](#Example)
+* [Examples](#Examples)
 * [Requirements](#Requirements)
 * [Installation](#Installation)
 * [Documentation](#Documentation)
@@ -22,7 +22,7 @@ Content
 
 
 
-Example<a name="Example" />
+Examples<a name="Examples" />
 -------
 
 ```java
