@@ -20,15 +20,16 @@ package de.pro.lib.properties.api;
 import java.util.List;
 
 /**
- * The <code>Interface</code> for the class {@link de.pro.lib.properties.PRoProperties}.<br />
+ * The <code>Interface</code> for the class {@link de.pro.lib.properties.LibProperties}.<br />
  * Over the facade {@link de.pro.lib.properties.api.PropertiesFacade} you can 
  * access the methods in this <code>Interface</code>.
  *
  * @author PRo
- * @see de.pro.lib.properties.PRoProperties
+ * @see de.pro.lib.properties.LibProperties
  * @see de.pro.lib.properties.api.PropertiesFacade
  */
-public interface IProperties {
+public interface ILibProperties {
+    
     /**
      * Searches for the property with the specified key in this property list.<br />
      * If the key is not found in this property list, the default property list,
@@ -152,4 +153,5 @@ public interface IProperties {
      * @see #getSystemProperty(java.lang.String)
      */
     public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException;
+
 }

@@ -18,7 +18,7 @@
 package de.pro.lib.properties;
 
 import de.pro.lib.logger.api.LoggerFacade;
-import de.pro.lib.properties.api.IProperties;
+import de.pro.lib.properties.api.ILibProperties;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
@@ -26,14 +26,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
 
 /**
- * The implementation from the Interface {@link de.pro.lib.properties.api.IProperties}.<br />
+ * The implementation from the Interface {@link de.pro.lib.properties.api.ILibProperties}.<br />
  * Access to this class is over the facade {@link de.pro.lib.properties.api.PropertiesFacade}.
  * 
  * @author PRo
- * @see de.pro.lib.properties.api.IProperties
+ * @see de.pro.lib.properties.api.ILibProperties
  * @see de.pro.lib.properties.api.PropertiesFacade
  */
-public class PRoProperties implements IProperties {
+public class LibProperties implements ILibProperties {
     
     private final ObservableMap<String, Properties> allProperties = FXCollections.observableHashMap();
 
@@ -104,4 +104,5 @@ public class PRoProperties implements IProperties {
     public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
         System.setProperty(key, value);
     }
+    
 }

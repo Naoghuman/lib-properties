@@ -16,33 +16,34 @@
  */
 package de.pro.lib.properties.api;
 
-import de.pro.lib.properties.PRoProperties;
+import de.pro.lib.properties.LibProperties;
 
 /**
  * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.properties.api.IProperties}.
+ * singleton instance of the Interface {@link de.pro.lib.properties.api.ILibProperties}.
  *
  * @author PRo
- * @see de.pro.lib.properties.api.IProperties
+ * @see de.pro.lib.properties.api.ILibProperties
  */
 public final class PropertiesFacade {
     
-    private static IProperties instance = null;
+    private static ILibProperties instance = null;
     
     /**
-     * Provides a singleton instance from the Interface {@link de.pro.lib.properties.api.IProperties}.
+     * Provides a singleton instance from the Interface {@link de.pro.lib.properties.api.ILibProperties}.
      * 
-     * @return A singleton instance of {@link de.pro.lib.properties.api.IProperties}.
-     * @see de.pro.lib.properties.api.IProperties
+     * @return A singleton instance of {@link de.pro.lib.properties.api.ILibProperties}.
+     * @see de.pro.lib.properties.api.ILibProperties
      */
-    public static IProperties getDefault() {
+    public static ILibProperties getDefault() {
         
         if (instance == null) {
-            instance = new PRoProperties();
+            instance = new LibProperties();
         }
         
         return instance;
     }
     
     private PropertiesFacade() { }
+    
 }

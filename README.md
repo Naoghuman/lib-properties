@@ -28,10 +28,10 @@ Examples<a name="Examples" />
 ```java
 /**
  * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.properties.api.IProperties}.
+ * singleton instance of the Interface {@link de.pro.lib.properties.api.ILibProperties}.
  *
  * @author PRo
- * @see de.pro.lib.properties.api.IProperties
+ * @see de.pro.lib.properties.api.ILibProperties
  */
 public final class PropertiesFacacde
 ```
