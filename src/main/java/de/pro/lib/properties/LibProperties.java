@@ -76,7 +76,7 @@ public class LibProperties implements ILibProperties {
             properties.load(this.getClass().getResourceAsStream(pathWithBundle));
             allProperties.put(pathWithBundle, properties);
             
-            LoggerFacade.getDefault().debug(this.getClass(),
+            LoggerFacade.getDefault().own(this.getClass(),
                     String.format("Load properties: %s", pathWithBundle)); // NOI18N
         } catch (IOException ex) {
             LoggerFacade.getDefault().error(this.getClass(),
