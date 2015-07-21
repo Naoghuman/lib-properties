@@ -1,7 +1,7 @@
 Lib-Properties
 ==============
 
-A library for `easy` loading [properties] in a [JavaFX] &amp; [Maven] application.
+A library for `easy` loading [properties] in a [JavaFX] &amp; [Maven] desktop application.
 
 
 Current `version` is `0.1.1` (07.2015).
