@@ -19,31 +19,39 @@ package de.pro.lib.properties.api;
 import de.pro.lib.properties.LibProperties;
 
 /**
- * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.properties.api.ILibProperties}.
+ * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides access
+ * to the properties methods during the Interface 
+ * {@link de.pro.lib.properties.api.ILibProperties}.
  *
  * @author PRo
  * @see de.pro.lib.properties.api.ILibProperties
  */
-public final class PropertiesFacade {
-    
-    private static ILibProperties instance = null;
-    
+public enum PropertiesFacade {
+
     /**
-     * Provides a singleton instance from the Interface {@link de.pro.lib.properties.api.ILibProperties}.
-     * 
-     * @return A singleton instance of {@link de.pro.lib.properties.api.ILibProperties}.
-     * @see de.pro.lib.properties.api.ILibProperties
+     * Over the value <code>INSTANCE</code> the developer have access to the
+     * singleton instance from the <code>PropertiesFacade</code>.
      */
-    public static ILibProperties getDefault() {
-        
-        if (instance == null) {
-            instance = new LibProperties();
-        }
-        
-        return instance;
+    INSTANCE;
+    
+    private ILibProperties properties = null;
+    
+    private PropertiesFacade() {
+        this.initialize();
     }
     
-    private PropertiesFacade() { }
+    private void initialize() {
+        properties = new LibProperties();
+    }
+
+    /**
+     * Over the {@link de.pro.lib.properties.api.ILibProperties} the developer 
+     * have access to the properties methods.
+     * 
+     * @return a singleton instance from ILibProperties.
+     */
+    public ILibProperties getProperties() {
+        return properties;
+    }
     
 }

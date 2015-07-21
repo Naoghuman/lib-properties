@@ -27,13 +27,14 @@ Examples<a name="Examples" />
 
 ```java
 /**
- * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.properties.api.ILibProperties}.
+ * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides access
+ * to the properties methods during the Interface 
+ * {@link de.pro.lib.properties.api.ILibProperties}.
  *
  * @author PRo
  * @see de.pro.lib.properties.api.ILibProperties
  */
-public final class PropertiesFacacde
+public enum PropertiesFacade
 ```
 
 ```java
@@ -48,7 +49,7 @@ public final class PropertiesFacacde
  * @param pathWithBundle The properties which should be register. If the 
  * properties always register nothing happen.
  */
-PropertiesFacacde.getDefault().register(String pathWithBundle);
+PropertiesFacacde.INSTANCE.getProperties().register(String pathWithBundle);
 ```
 
 ```java
@@ -62,7 +63,7 @@ PropertiesFacacde.getDefault().register(String pathWithBundle);
  * @param key The property key.
  * @return The value in this property list with the specified key value.
  */
-PropertiesFacacde.getDefault().getProperty(String pathWithBundle, String key);
+PropertiesFacacde.INSTANCE.getProperties().getProperty(String pathWithBundle, String key);
 ```
 
 ```java
@@ -78,7 +79,7 @@ PropertiesFacacde.getDefault().getProperty(String pathWithBundle, String key);
  * then the <code>defaultValue</code> will be returned.
  * @return The value in this property list with the specified key value.
  */
-PropertiesFacacde.getDefault().getProperty(String pathWithBundle, String key, String defaultValue);
+PropertiesFacacde.INSTANCE.getProperties().getProperty(String pathWithBundle, String key, String defaultValue);
 ```
 
 
