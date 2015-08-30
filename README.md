@@ -1,5 +1,5 @@
 Lib-Properties
-==============
+===
 
 A library for `easy` loading [properties] in a [JavaFX] &amp; [Maven] desktop application.
 
@@ -9,7 +9,7 @@ Current `version` is `0.2.0` (07.2015).
 
 
 Content
--------
+---
 
 * [Examples](#Examples)
 * [Requirements](#Requirements)
@@ -23,7 +23,7 @@ Content
 
 
 Examples<a name="Examples" />
--------
+---
 
 ```java
 /**
@@ -84,7 +84,7 @@ PropertiesFacacde.INSTANCE.getProperties().getProperty(String pathWithBundle, St
 
 
 Requirements<a name="Requirements" />
-------------
+---
 
 * On your system you need [JRE 8] or [JDK 8] installed.
 * The library [Lib-Properties-0.2.0.jar](#Installation).
@@ -95,7 +95,7 @@ Requirements<a name="Requirements" />
 
 
 Installation<a name="Installation" />
-------------
+---
 
 * If not installed download the [JRE 8] or the [JDK 8].
   * Optional: To work better with [FXML] files in a [JavaFX] application download the [JavaFX Scene Builder] under 'Additional Resources'.
@@ -107,14 +107,14 @@ Installation<a name="Installation" />
 
 
 Documentation<a name="Documentation" />
--------------
+---
 
 Momentary only the [JavaDoc] in the library itself is available.
 
 
 
 Contribution<a name="Contribution" />
-------------
+---
 
 * If you find a `Bug` I will be glad if you could report an [Issue].
 * If you want to contribute to the project plz fork the project and do a [Pull Request].
@@ -122,21 +122,21 @@ Contribution<a name="Contribution" />
 
 
 License<a name="License" />
--------
+---
 
 The project `Lib-Properties` is licensed under [General Public License 3.0].
 
 
 
 Autor<a name="Autor" />
------
+---
 
 The project `Lib-Properties` is maintained by me, Peter Rogge. See [Contact](#Contact).
 
 
 
 Contact<a name="Contact" />
--------
+---
 
 You can reach me under <peter.rogge@yahoo.de>.
 
