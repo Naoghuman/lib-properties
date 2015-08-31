@@ -6,7 +6,7 @@
     <artifactId>Lib-Properties</artifactId>
     <version>0.2.1-SNAPSHOT</version> <!-- -SNAPSHOT -->
     <packaging>jar</packaging>
-    <description>A library for easy loading properties in a JavaFX &amp; Maven desktop application. See https://github.com/Naoghuman/lib-properties for more details.</description>
+    <description>Lib-Properties is a library for easy loading properties in a JavaFX &amp; Maven desktop application. See https://github.com/Naoghuman/lib-properties for more details.</description>
     <name>Lib-Properties</name>
     <inceptionYear>2014</inceptionYear>
     <url>https://github.com/Naoghuman/lib-properties.git</url>
