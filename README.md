@@ -15,6 +15,7 @@ Content
 * [Examples](#Examples)
 * [Api](#Api)
     - [de.pro.lib.properties.api.PropertiesFacade](#PropertiesFacade)
+* [Download](#Download)
 * [Requirements](#Requirements)
 * [Installation](#Installation)
 * [Documentation](#Documentation)
@@ -251,6 +252,22 @@ public void setSystemProperty(String key, String value) throws SecurityException
 
 
 
+Download<a name="Download" />
+---
+
+Current `version` is `0.2.0`. Main points in this release are:
+* With this release `PropertiesFacade` is now an `enum singleton facade`.
+* So instead `PropertiesFacade.getDefault()` now `PropertiesFacade.INSTANCE.getPreferences()` 
+  is to use.
+
+Download:
+* [Release v0.2.0 (07.2015)]
+
+An overview about all existings releases can be found here:
+* [Overview from all releases in Lib-Properties]
+
+
+
 Requirements<a name="Requirements" />
 ---
 
@@ -311,6 +328,7 @@ Contact<a name="Contact" />
 You can reach me under <peter.rogge@yahoo.de>.
 
 
+
 [//]: # (Links)
 [Eclipse]:https://www.eclipse.org/
 [FXML]:http://docs.oracle.com/javafx/2/fxml_get_started/jfxpub-fxml_get_started.htm
@@ -328,7 +346,9 @@ You can reach me under <peter.rogge@yahoo.de>.
 [log4j-core-2.3.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
+[Overview from all releases in Lib-Properties]:https://github.com/Naoghuman/lib-properties/releases
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
+[Release v0.2.0 (07.2015)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.2.0
 
 
