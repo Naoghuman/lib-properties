@@ -17,6 +17,7 @@
 package de.pro.lib.properties.api;
 
 import de.pro.lib.properties.LibProperties;
+import java.util.List;
 
 /**
  * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides access
@@ -26,7 +27,7 @@ import de.pro.lib.properties.LibProperties;
  * @author PRo
  * @see de.pro.lib.properties.api.ILibProperties
  */
-public enum PropertiesFacade {
+public enum PropertiesFacade implements ILibProperties {
 
     /**
      * Over the value <code>INSTANCE</code> the developer have access to the
@@ -44,14 +45,39 @@ public enum PropertiesFacade {
         properties = new LibProperties();
     }
 
-    /**
-     * Over the {@link de.pro.lib.properties.api.ILibProperties} the developer 
-     * have access to the properties methods.
-     * 
-     * @return a singleton instance from ILibProperties.
-     */
-    public ILibProperties getProperties() {
-        return properties;
+    @Override
+    public String getProperty(String pathWithBundle, String key) {
+        return properties.getProperty(pathWithBundle, key);
+    }
+
+    @Override
+    public String getProperty(String pathWithBundle, String key, String defaultValue) {
+        return properties.getProperty(pathWithBundle, key, defaultValue);
+    }
+
+    @Override
+    public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException {
+        return properties.getSystemProperty(key);
+    }
+
+    @Override
+    public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+        return properties.isSystemProperty(key, value);
+    }
+
+    @Override
+    public void register(String pathWithBundle) {
+        properties.register(pathWithBundle);
+    }
+
+    @Override
+    public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException {
+        properties.registerSystemProperties(regex, unnamed);
+    }
+
+    @Override
+    public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+        properties.setSystemProperty(key, value);
     }
     
 }

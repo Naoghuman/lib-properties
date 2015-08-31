@@ -49,7 +49,7 @@ public enum PropertiesFacade
  * @param pathWithBundle The properties which should be register. If the 
  * properties always register nothing happen.
  */
-PropertiesFacacde.INSTANCE.getProperties().register(String pathWithBundle);
+PropertiesFacacde.INSTANCE.register(String pathWithBundle);
 ```
 
 ```java
@@ -63,7 +63,7 @@ PropertiesFacacde.INSTANCE.getProperties().register(String pathWithBundle);
  * @param key The property key.
  * @return The value in this property list with the specified key value.
  */
-PropertiesFacacde.INSTANCE.getProperties().getProperty(String pathWithBundle, String key);
+PropertiesFacacde.INSTANCE.getProperty(String pathWithBundle, String key);
 ```
 
 ```java
@@ -79,7 +79,7 @@ PropertiesFacacde.INSTANCE.getProperties().getProperty(String pathWithBundle, St
  * then the <code>defaultValue</code> will be returned.
  * @return The value in this property list with the specified key value.
  */
-PropertiesFacacde.INSTANCE.getProperties().getProperty(String pathWithBundle, String key, String defaultValue);
+PropertiesFacacde.INSTANCE.getProperty(String pathWithBundle, String key, String defaultValue);
 ```
 
 
@@ -98,7 +98,8 @@ Installation<a name="Installation" />
 ---
 
 * If not installed download the [JRE 8] or the [JDK 8].
-  * Optional: To work better with [FXML] files in a [JavaFX] application download the [JavaFX Scene Builder] under 'Additional Resources'.
+  * Optional: To work better with [FXML] files in a [JavaFX] application download 
+    the [JavaFX Scene Builder] under 'Additional Resources'.
 * Choose your preferred IDE (e.g. [NetBeans], [Eclipse] or [IntelliJ IDEA]) for development.
 * Download or clone [Lib-Properties].
 * Download or clone [Lib-Logger].
