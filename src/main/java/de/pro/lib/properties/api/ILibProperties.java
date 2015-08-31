@@ -131,7 +131,7 @@ public interface ILibProperties {
      * is <code>null</code>.
      * @throws IllegalArgumentException If <code>key</code> is empty.
      */
-    public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException ;
+    public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
      * Allowed access to the <code>System</code> properties. Sets the system property 
