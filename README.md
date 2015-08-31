@@ -278,8 +278,9 @@ Installation<a name="Installation" />
 Documentation<a name="Documentation" />
 ---
 
-Momentary only the [JavaDoc] in the library itself is available.
-
+* In section [Api](#Api) you can see the main point(s) to access the functionality 
+  in this library.
+* For additional information see the [JavaDoc] in the library itself.
 
 
 Contribution<a name="Contribution" />
