@@ -65,7 +65,7 @@ public class DreamBetterWorlds extends Application implements IApplicationConfig
     }
 
     private String getProperty(String propertyKey) {
-        return PropertiesFacade.INSTANCE.getProperties().getProperty(DBW__RESOURCE_BUNDLE, propertyKey);
+        return PropertiesFacade.INSTANCE.getProperty(DBW__RESOURCE_BUNDLE, propertyKey);
     }
     ...
 }
