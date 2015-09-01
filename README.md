@@ -4,7 +4,7 @@ Lib-Properties
 Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp; 
 [Maven] desktop application.
 
-Current `version` is `0.2.0` (07.2015).
+Current `version` is `0.2.1` (09.2015).
 
 
 
@@ -240,13 +240,13 @@ public void setSystemProperty(String key, String value) throws SecurityException
 Download<a name="Download" />
 ---
 
-Current `version` is `0.2.0`. Main points in this release are:
+Current `version` is `0.2.1`. Main points in this release are:
 * With this release `PropertiesFacade` is now an `enum singleton facade`.
 * So instead `PropertiesFacade.getDefault()` now `PropertiesFacade.INSTANCE.getPreferences()` 
   is to use.
 
 Download:
-* [Release v0.2.0 (07.2015)]
+* [Release v0.2.1 (09.2015)]
 
 An overview about all existings releases can be found here:
 * [Overview from all releases in Lib-Properties]
@@ -257,7 +257,7 @@ Requirements<a name="Requirements" />
 ---
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Properties-0.2.0.jar](#Installation).
+* The library [Lib-Properties-0.2.1.jar](#Installation).
 * The library [Lib-Logger-0.2.1.jar](#Installation).
   * Included is the [log4j-api-2.3.jar].
   * Included is the [log4j-core-2.3.jar].
@@ -334,6 +334,6 @@ You can reach me under <peter.rogge@yahoo.de>.
 [Overview from all releases in Lib-Properties]:https://github.com/Naoghuman/lib-properties/releases
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
-[Release v0.2.0 (07.2015)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.2.0
+[Release v0.2.1 (09.2015)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.2.0
 
 
