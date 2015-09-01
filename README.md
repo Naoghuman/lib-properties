@@ -242,8 +242,13 @@ Download<a name="Download" />
 
 Current `version` is `0.2.1`. Main points in this release are:
 * With this release `PropertiesFacade` is now an `enum singleton facade`.
-* So instead `PropertiesFacade.getDefault()` now `PropertiesFacade.INSTANCE.getPreferences()` 
-  is to use.
+* Implement the interface `ILibPreferences` directly in `PropertiesFacade` for 
+  easier handling.
+* Add new section `Api` to the ReadMe.
+* Add new section `Download` to the ReadMe.
+* Add new section `Intention` to the ReadMe.
+* Update the section `Examples` in the ReadMe.
+* Update the section `Documentation` to the ReadMe.
 
 Download:
 * [Release v0.2.1 (09.2015)]
