@@ -338,6 +338,6 @@ You can reach me under <peter.rogge@yahoo.de>.
 [Overview from all releases in Lib-Properties]:https://github.com/Naoghuman/lib-properties/releases
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
-[Release v0.2.1 (09.2015)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.2.0
+[Release v0.2.1 (09.2015)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.2.1
 
 
