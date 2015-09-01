@@ -4,7 +4,6 @@ Lib-Properties
 Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp; 
 [Maven] desktop application.
 
-
 Current `version` is `0.2.0` (07.2015).
 
 
@@ -13,6 +12,8 @@ Content
 ---
 
 * [Examples](#Examples)
+    - [How to register a resource bundle](#HowToRegisterAResourceBundle)
+    - [How to access a value from the resource bundle](#HowToAccessAValueFromTheResourceBundle)
 * [Api](#Api)
     - [de.pro.lib.properties.api.PropertiesFacade](#PropertiesFacade)
 * [Download](#Download)
@@ -29,61 +30,45 @@ Content
 Examples<a name="Examples" />
 ---
 
-```java
-/**
- * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides access
- * to the properties methods during the Interface 
- * {@link de.pro.lib.properties.api.ILibProperties}.
- *
- * @author PRo
- * @see de.pro.lib.properties.api.ILibProperties
- */
-public enum PropertiesFacade
-```
+### How to register a resource bundle<a name="HowToRegisterAResourceBundle" />
 
 ```java
-/**
- * Register with this method your <code>.properties</code> file.<br />
- * The parameter <code>pathWithBundle</code> have the format:<br />
- * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
- * 
- * The file should be in the <code>src/main/resources</code> folder with the 
- * previous named packaged structure in the specific maven module.
- * 
- * @param pathWithBundle The properties which should be register. If the 
- * properties always register nothing happen.
- */
-PropertiesFacacde.INSTANCE.register(String pathWithBundle);
+public interface IApplicationConfiguration {
+    ...
+    public static final String DBW__RESOURCE_BUNDLE = "/de/pro/dbw/application/DreamBetterWorlds.properties"; // NOI18N
+}
+
+public class DreamBetterWorlds extends Application implements IApplicationConfiguration, IPreferencesConfiguration {
+    @Override
+    public void init() throws Exception {
+        PropertiesFacade.INSTANCE.register(DBW__RESOURCE_BUNDLE);
+        ...
+    }
+
+    ...
+}
 ```
 
-```java
-/**
- * Searches for the property with the specified key in this property list.
- * If the key is not found in this property list, the default property list,
- * and its defaults, recursively, are then checked. The method returns
- * {@code null} if the property is not found.
- * 
- * @param pathWithBundle The properties where value is stored.
- * @param key The property key.
- * @return The value in this property list with the specified key value.
- */
-PropertiesFacacde.INSTANCE.getProperty(String pathWithBundle, String key);
-```
+
+### How to access a value from the resource bundle<a name="HowToAccessAValueFromTheResourceBundle" />
 
 ```java
-/**
- * Searches for the property with the specified key in this property list.
- * If the key is not found in this property list, the default property list,
- * and its defaults, recursively, are then checked. The method returns the
- * default value argument if the property is not found.
- * 
- * @param pathWithBundle The properties where value is stored.
- * @param key The property key.
- * @param defaultValue If the key-value pair not stored in the properties
- * then the <code>defaultValue</code> will be returned.
- * @return The value in this property list with the specified key value.
- */
-PropertiesFacacde.INSTANCE.getProperty(String pathWithBundle, String key, String defaultValue);
+
+public class DreamBetterWorlds extends Application implements IApplicationConfiguration, IPreferencesConfiguration {
+    private static final String KEY__APPLICATION__TITLE = "application.title"; // NOI18N
+    ...
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        stage.setTitle(this.getProperty(KEY__APPLICATION__TITLE));
+        ...
+    }
+
+    private String getProperty(String propertyKey) {
+        return PropertiesFacade.INSTANCE.getProperties().getProperty(DBW__RESOURCE_BUNDLE, propertyKey);
+    }
+    ...
+}
 ```
 
 
