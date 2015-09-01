@@ -241,7 +241,6 @@ Download<a name="Download" />
 ---
 
 Current `version` is `0.2.1`. Main points in this release are:
-* With this release `PropertiesFacade` is now an `enum singleton facade`.
 * Implement the interface `ILibPreferences` directly in `PropertiesFacade` for 
   easier handling.
 * Add new section `Api` to the ReadMe.
