@@ -9,6 +9,7 @@ Welcome to `Lib-Properties` with the new release `v0.3.0`.
 
 
 #### New
+#5 [pom] Update project version to 0.3.0-SNAPSHOT.
 
 
 
@@ -36,5 +37,4 @@ Welcome to `Lib-Properties` with the new release `v0.3.0`.
 
 
 [//]: # (Issues which will be integrated in this release)
-#5 [pom] Update project version to 0.3.0-SNAPSHOT.
 #4 [Dependencies] Update the project to the new version from lib-logger-0.3.0.
