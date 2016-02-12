@@ -14,18 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.lib.properties.api;
+package com.github.naoghuman.lib.properties.api;
 
-import de.pro.lib.properties.LibProperties;
+import com.github.naoghuman.lib.properties.LibProperties;
 import java.util.List;
 
 /**
- * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides access
- * to the properties methods during the Interface 
- * {@link de.pro.lib.properties.api.ILibProperties}.
+ * The facade {@link com.github.naoghuman.lib.properties.api.PropertiesFacade} 
+ * provides access to the properties methods during the Interface 
+ * {@link com.github.naoghuman.lib.properties.api.ILibProperties}.
  *
  * @author PRo
- * @see de.pro.lib.properties.api.ILibProperties
+ * @see com.github.naoghuman.lib.properties.api.ILibProperties
  */
 public enum PropertiesFacade implements ILibProperties {
 

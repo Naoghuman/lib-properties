@@ -15,10 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.pro.lib.properties;
+package com.github.naoghuman.lib.properties;
 
 import de.pro.lib.logger.api.LoggerFacade;
-import de.pro.lib.properties.api.ILibProperties;
+import com.github.naoghuman.lib.properties.api.ILibProperties;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
@@ -26,12 +26,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
 
 /**
- * The implementation from the Interface {@link de.pro.lib.properties.api.ILibProperties}.<br />
- * Access to this class is over the facade {@link de.pro.lib.properties.api.PropertiesFacade}.
+ * The implementation from the Interface {@link com.github.naoghuman.lib.properties.api.ILibProperties}.<br />
+ * Access to this class is over the facade {@link com.github.naoghuman.lib.properties.api.PropertiesFacade}.
  * 
  * @author PRo
- * @see de.pro.lib.properties.api.ILibProperties
- * @see de.pro.lib.properties.api.PropertiesFacade
+ * @see com.github.naoghuman.lib.properties.api.ILibProperties
+ * @see com.github.naoghuman.lib.properties.api.PropertiesFacade
  */
 public class LibProperties implements ILibProperties {
     

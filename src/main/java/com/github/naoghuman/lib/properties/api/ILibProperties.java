@@ -15,18 +15,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.pro.lib.properties.api;
+package com.github.naoghuman.lib.properties.api;
 
 import java.util.List;
 
 /**
- * The <code>Interface</code> for the class {@link de.pro.lib.properties.LibProperties}.<br />
- * Over the facade {@link de.pro.lib.properties.api.PropertiesFacade} you can 
- * access the methods in this <code>Interface</code>.
+ * The <code>Interface</code> for the class {@link com.github.naoghuman.lib.properties.LibProperties}.<br />
+ * Over the facade {@link com.github.naoghuman.lib.properties.api.PropertiesFacade} 
+ * you can  access the methods in this <code>Interface</code>.
  *
  * @author PRo
- * @see de.pro.lib.properties.LibProperties
- * @see de.pro.lib.properties.api.PropertiesFacade
+ * @see com.github.naoghuman.lib.properties.LibProperties
+ * @see com.github.naoghuman.lib.properties.api.PropertiesFacade
  */
 public interface ILibProperties {
     

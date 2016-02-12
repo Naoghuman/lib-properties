@@ -15,7 +15,7 @@ Content
     - [How to register a resource bundle](#HowToRegisterAResourceBundle)
     - [How to access a value from the resource bundle](#HowToAccessAValueFromTheResourceBundle)
 * [Api](#Api)
-    - [de.pro.lib.properties.api.PropertiesFacade](#PropertiesFacade)
+    - [com.github.naoghuman.lib.properties.api.PropertiesFacade](#PropertiesFacade)
 * [Download](#Download)
 * [Requirements](#Requirements)
 * [Installation](#Installation)
@@ -76,16 +76,16 @@ public class DreamBetterWorlds extends Application implements IApplicationConfig
 Api<a name="Api" />
 ---
 
-### de.pro.lib.properties.api.PropertiesFacade<a name="PropertiesFacade" />
+### com.github.naoghuman.lib.properties.api.PropertiesFacade<a name="PropertiesFacade" />
 
 ```java
 /**
- * The facade {@link de.pro.lib.properties.api.PropertiesFacade} provides access
- * to the properties methods during the Interface 
- * {@link de.pro.lib.properties.api.ILibProperties}.
+ * The facade {@link com.github.naoghuman.lib.properties.api.PropertiesFacade} 
+ * provides access to the properties methods during the Interface 
+ * {@link com.github.naoghuman.lib.properties.api.ILibProperties}.
  *
  * @author PRo
- * @see de.pro.lib.properties.api.ILibProperties
+ * @see com.github.naoghuman.lib.properties.api.ILibProperties
  */
 public enum PropertiesFacade implements ILibProperties
 ```
