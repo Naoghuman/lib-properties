@@ -14,6 +14,7 @@ Welcome to `Lib-Properties` with the new release `v0.3.0`.
 
 
 #### Enhancement
+#4 [Dependencies] Update the project to the new version from lib-logger-0.3.0.
 #3 [Release] Add folder release with new release file to project.
 
 
@@ -37,4 +38,3 @@ Welcome to `Lib-Properties` with the new release `v0.3.0`.
 
 
 [//]: # (Issues which will be integrated in this release)
-#4 [Dependencies] Update the project to the new version from lib-logger-0.3.0.

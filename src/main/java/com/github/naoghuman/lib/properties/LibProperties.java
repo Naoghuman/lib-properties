@@ -17,7 +17,7 @@
 
 package com.github.naoghuman.lib.properties;
 
-import de.pro.lib.logger.api.LoggerFacade;
+import com.github.naoghuman.lib.logger.api.LoggerFacade;
 import com.github.naoghuman.lib.properties.api.ILibProperties;
 import java.io.IOException;
 import java.util.List;
