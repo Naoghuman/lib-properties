@@ -265,7 +265,7 @@ Current `version` is `0.4.0`. Main points in this release are:
 <dependencies>
     <dependency>
         <groupId>com.github.naoghuman</groupId>
-        <artifactId>lib-action</artifactId>
+        <artifactId>lib-properties</artifactId>
         <version>0.4.0</version>
     </dependency>
 </dependencies>
