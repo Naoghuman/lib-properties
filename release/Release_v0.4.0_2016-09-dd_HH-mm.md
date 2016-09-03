@@ -6,8 +6,8 @@ desktop application.
 
 
 #### Summary
-* ...
-* ...
+* Deploy the jar files to Maven Central :smiley: .
+* Change PropertiesFacade.INSTANCE to PropertiesFacade.getDefault() with Optional.
 
 
 

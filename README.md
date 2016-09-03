@@ -4,7 +4,7 @@ Lib-Properties
 Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp; 
 [Maven] desktop application.
 
-Current `version` is `0.2.1` (09.2015).
+Current `version` is `0.4.0` (09.03.2016).
 
 
 
@@ -256,17 +256,23 @@ public void setSystemProperty(String key, String value) throws SecurityException
 Download<a name="Download" />
 ---
 
-Current `version` is `0.2.1`. Main points in this release are:
-* Implement the interface `ILibPreferences` directly in `PropertiesFacade` for 
-  easier handling.
-* Add new section `Api` to the ReadMe.
-* Add new section `Download` to the ReadMe.
-* Add new section `Intention` to the ReadMe.
-* Update the section `Examples` in the ReadMe.
-* Update the section `Documentation` to the ReadMe.
+Current `version` is `0.4.0`. Main points in this release are:
+* Deploy the jar files to Maven Central :smiley: .
+* Change PropertiesFacade.INSTANCE to PropertiesFacade.getDefault() with Optional.
+
+**Maven coordinates**  
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.github.naoghuman</groupId>
+        <artifactId>lib-action</artifactId>
+        <version>0.4.0</version>
+    </dependency>
+</dependencies>
+```
 
 Download:
-* [Release v0.2.1 (09.2015)]
+* [Release v0.4.0 (09.03.2016)]
 
 An overview about all existings releases can be found here:
 * [Overview from all releases in Lib-Properties]
@@ -277,10 +283,12 @@ Requirements<a name="Requirements" />
 ---
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Properties-0.2.1.jar](#Installation).
-* The library [Lib-Logger-0.3.0.jar](#Installation).
-  * Included is the [log4j-api-2.4.1.jar].
-  * Included is the [log4j-core-2.4.1.jar].
+* The library [Lib-Properties-0.4.0.jar](#Installation).
+
+In the library are following libraries registered as dependencies:
+* The library [Lib-Logger-0.4.0.jar](#Installation).
+  * Included in `Lib-Logger` is the [log4j-api-2.6.2.jar].
+  * Included in `Lib-Logger` is the [log4j-core-2.6.2.jar].
 
 
 
@@ -347,13 +355,13 @@ You can reach me under <peter.rogge@yahoo.de>.
 [JRE 8]:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [Lib-Properties]:https://github.com/Naoghuman/lib-properties
 [Lib-Logger]:https://github.com/Naoghuman/lib-logger
-[log4j-api-2.4.1.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
-[log4j-core-2.4.1.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-api-2.6.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-core-2.6.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Overview from all releases in Lib-Properties]:https://github.com/Naoghuman/lib-properties/releases
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
-[Release v0.2.1 (09.2015)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.2.1
+[Release v0.4.0 (09.03.2016)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.4.0
 
 
