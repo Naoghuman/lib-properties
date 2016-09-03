@@ -20,6 +20,7 @@ desktop application.
 
 
 #### Enhancement
+#10 [pom] New format from jar(s) for Maven Central.
 
 
 
