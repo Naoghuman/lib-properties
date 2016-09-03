@@ -28,6 +28,7 @@ desktop application.
 
 
 #### Refactoring
+#14 [Version] Change version to 0.4.0-SNAPSHOT.
 #13 [Documentation] Add a template for the release-notes.
 
 
