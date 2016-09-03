@@ -34,6 +34,7 @@ desktop application.
 
 
 #### Additional
+#12 [Internal] Add /todo/ to .gitignore.
 
 
 
