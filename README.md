@@ -41,7 +41,7 @@ public interface IApplicationConfiguration {
 public class DreamBetterWorlds extends Application implements IApplicationConfiguration, IPreferencesConfiguration {
     @Override
     public void init() throws Exception {
-        PropertiesFacade.INSTANCE.register(DBW__RESOURCE_BUNDLE);
+        PropertiesFacade.getDefault().register(DBW__RESOURCE_BUNDLE);
         ...
     }
 
@@ -65,7 +65,7 @@ public class DreamBetterWorlds extends Application implements IApplicationConfig
     }
 
     private String getProperty(String propertyKey) {
-        return PropertiesFacade.INSTANCE.getProperty(DBW__RESOURCE_BUNDLE, propertyKey);
+        return PropertiesFacade.getDefault().getProperty(DBW__RESOURCE_BUNDLE, propertyKey);
     }
     ...
 }
@@ -87,7 +87,7 @@ Api<a name="Api" />
  * @author PRo
  * @see com.github.naoghuman.lib.properties.api.ILibProperties
  */
-public enum PropertiesFacade implements ILibProperties
+public final class PropertiesFacade implements ILibProperties {
 ```
 
 

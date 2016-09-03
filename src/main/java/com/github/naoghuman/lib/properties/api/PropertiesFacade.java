@@ -18,6 +18,7 @@ package com.github.naoghuman.lib.properties.api;
 
 import com.github.naoghuman.lib.properties.LibProperties;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * The facade {@link com.github.naoghuman.lib.properties.api.PropertiesFacade} 
@@ -27,13 +28,18 @@ import java.util.List;
  * @author PRo
  * @see com.github.naoghuman.lib.properties.api.ILibProperties
  */
-public enum PropertiesFacade implements ILibProperties {
+public final class PropertiesFacade implements ILibProperties {
+    
+    private static final Optional<PropertiesFacade> instance = Optional.of(new PropertiesFacade());
 
     /**
-     * Over the value <code>INSTANCE</code> the developer have access to the
-     * singleton instance from the <code>PropertiesFacade</code>.
+     * Returns a singleton instance from the class <code>PropertiesFacade</code>.
+     * 
+     * @return a singleton instance from the class <code>PropertiesFacade</code>.
      */
-    INSTANCE;
+    public static final PropertiesFacade getDefault() {
+        return instance.get();
+    }
     
     private ILibProperties properties = null;
     
