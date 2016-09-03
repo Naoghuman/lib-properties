@@ -20,6 +20,7 @@ package com.github.naoghuman.lib.properties;
 import com.github.naoghuman.lib.logger.api.LoggerFacade;
 import com.github.naoghuman.lib.properties.api.ILibProperties;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import javafx.collections.FXCollections;
@@ -82,6 +83,13 @@ public class LibProperties implements ILibProperties {
             LoggerFacade.getDefault().error(this.getClass(),
                     String.format("Can't load properties: %s", pathWithBundle), ex); // NOI18N
         }
+    }
+
+    @Override
+    public void register(ArrayList<String> pathWithBundles) {
+        pathWithBundles.forEach(pathWithBundle -> {
+            this.register(pathWithBundle);
+        });
     }
 
     @Override

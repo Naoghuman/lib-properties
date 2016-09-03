@@ -17,6 +17,7 @@
 package com.github.naoghuman.lib.properties.api;
 
 import com.github.naoghuman.lib.properties.LibProperties;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -74,6 +75,11 @@ public final class PropertiesFacade implements ILibProperties {
     @Override
     public void register(String pathWithBundle) {
         properties.register(pathWithBundle);
+    }
+
+    @Override
+    public void register(ArrayList<String> pathWithBundles) {
+        properties.register(pathWithBundles);
     }
 
     @Override

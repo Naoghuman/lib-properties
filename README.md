@@ -195,6 +195,22 @@ public void register(String pathWithBundle);
 
 ```java
 /**
+ * Register with this method your <code>.properties</code> files.<br />
+ * The parameter in <code>pathWithBundles</code> should have the format:<br />
+ * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
+ * 
+ * The files should be in the <code>src/main/resources</code> folder with the 
+ * previous named packaged structure in the specific maven module.
+ * 
+ * @param pathWithBundles The properties which should be register. If the 
+ * properties always register nothing happen.
+ */
+public void register(ArrayList<String> pathWithBundles);
+```
+
+
+```java
+/**
  * Register the given {@link java.util.List} as <code>System</code> properties.
  * Every entry in the {@link java.util.List} will splitted with the regex to 
  * a <code>System</code> property pair (key, value).
