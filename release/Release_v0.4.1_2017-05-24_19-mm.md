@@ -28,6 +28,7 @@ Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp;
 
 
 #### Refactoring
+#18 [pom] Update the tag `tagNameFormat`.
 
 
 
