@@ -30,6 +30,7 @@ Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp;
 #### Refactoring
 #19 [Dependencies] Update the dependencies to the libraries.
 #18 [pom] Update the tag `tagNameFormat`.
+#17 [Documentation] Insert maven-central coordinates into README.
 
 
 

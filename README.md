@@ -266,7 +266,7 @@ Current `version` is `0.4.0`. Main points in this release are:
     <dependency>
         <groupId>com.github.naoghuman</groupId>
         <artifactId>lib-properties</artifactId>
-        <version>0.4.0</version>
+        <version>0.4.1</version>
     </dependency>
 </dependencies>
 ```
