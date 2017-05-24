@@ -6,8 +6,8 @@ Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp;
 
 
 #### Summary
-* ...
-* ...
+* This is a minor update.
+* Primarily the dependency to the library `Lib-Logger` is updated.
 
 
 
