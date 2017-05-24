@@ -1,4 +1,4 @@
-Welcome to `Lib-Properties` with the new release `x.y.z`.
+Welcome to `Lib-Properties` with the new release `0.4.1`.
 
 Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp; 
 [Maven] desktop application.
