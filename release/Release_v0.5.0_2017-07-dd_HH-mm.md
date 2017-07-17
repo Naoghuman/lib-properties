@@ -20,6 +20,7 @@ Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp;
 
 
 #### Enhancement
+#21 [api] Update the packages, classes and interfaces to reflect my library conventions.
 
 
 
