@@ -29,6 +29,7 @@ import java.util.Optional;
  * @author PRo
  * @see com.github.naoghuman.lib.properties.api.ILibProperties
  */
+@Deprecated
 public final class PropertiesFacade implements ILibProperties {
     
     private static final Optional<PropertiesFacade> instance = Optional.of(new PropertiesFacade());
@@ -38,6 +39,7 @@ public final class PropertiesFacade implements ILibProperties {
      * 
      * @return a singleton instance from the class <code>PropertiesFacade</code>.
      */
+@Deprecated
     public static final PropertiesFacade getDefault() {
         return instance.get();
     }
@@ -53,41 +55,49 @@ public final class PropertiesFacade implements ILibProperties {
     }
 
     @Override
+    @Deprecated
     public String getProperty(String pathWithBundle, String key) {
         return properties.getProperty(pathWithBundle, key);
     }
 
     @Override
+    @Deprecated
     public String getProperty(String pathWithBundle, String key, String defaultValue) {
         return properties.getProperty(pathWithBundle, key, defaultValue);
     }
 
     @Override
+    @Deprecated
     public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException {
         return properties.getSystemProperty(key);
     }
 
     @Override
+    @Deprecated
     public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
         return properties.isSystemProperty(key, value);
     }
 
     @Override
+    @Deprecated
     public void register(String pathWithBundle) {
         properties.register(pathWithBundle);
     }
 
     @Override
+    @Deprecated
     public void register(ArrayList<String> pathWithBundles) {
         properties.register(pathWithBundles);
     }
 
     @Override
+    @Deprecated
     public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException {
         properties.registerSystemProperties(regex, unnamed);
     }
 
     @Override
+    @Deprecated
     public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
         properties.setSystemProperty(key, value);
     }

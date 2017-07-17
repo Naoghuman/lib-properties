@@ -29,6 +29,7 @@ import java.util.List;
  * @see com.github.naoghuman.lib.properties.LibProperties
  * @see com.github.naoghuman.lib.properties.api.PropertiesFacade
  */
+@Deprecated
 public interface ILibProperties {
     
     /**
@@ -41,6 +42,7 @@ public interface ILibProperties {
      * @param key The property key.
      * @return The value in this property list with the specified key value.
      */
+    @Deprecated
     public String getProperty(String pathWithBundle, String key);
     
     /**
@@ -55,6 +57,7 @@ public interface ILibProperties {
      * then the <code>defaultValue</code> will be returned.
      * @return The value in this property list with the specified key value.
      */
+    @Deprecated
     public String getProperty(String pathWithBundle, String key, String defaultValue);
     
     /**
@@ -78,6 +81,7 @@ public interface ILibProperties {
      * @throws IllegalArgumentException If <code>key</code> is empty.
      * @see #setSystemProperty(java.lang.String, java.lang.String)
      */
+    @Deprecated
     public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
@@ -103,6 +107,7 @@ public interface ILibProperties {
      * @see #getSystemProperty(java.lang.String)
      * @see #setSystemProperty(java.lang.String, java.lang.String)
      */
+    @Deprecated
     public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
@@ -116,6 +121,7 @@ public interface ILibProperties {
      * @param pathWithBundle The properties which should be register. If the 
      * properties always register nothing happen.
      */
+    @Deprecated
     public void register(String pathWithBundle);
     
     /**
@@ -129,6 +135,7 @@ public interface ILibProperties {
      * @param pathWithBundles The properties which should be register. If the 
      * properties always register nothing happen.
      */
+    @Deprecated
     public void register(ArrayList<String> pathWithBundles);
     
     /**
@@ -145,6 +152,7 @@ public interface ILibProperties {
      * is <code>null</code>.
      * @throws IllegalArgumentException If <code>key</code> is empty.
      */
+    @Deprecated
     public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
@@ -166,6 +174,7 @@ public interface ILibProperties {
      * @throws IllegalArgumentException If <code>key</code> is empty.
      * @see #getSystemProperty(java.lang.String)
      */
+    @Deprecated
     public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException;
 
 }

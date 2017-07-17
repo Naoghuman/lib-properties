@@ -34,26 +34,31 @@ import javafx.collections.ObservableMap;
  * @see com.github.naoghuman.lib.properties.api.ILibProperties
  * @see com.github.naoghuman.lib.properties.api.PropertiesFacade
  */
+@Deprecated
 public class LibProperties implements ILibProperties {
     
     private final ObservableMap<String, Properties> allProperties = FXCollections.observableHashMap();
 
     @Override
+    @Deprecated
     public String getProperty(String pathWithBundle, String key) {
         return allProperties.get(pathWithBundle).getProperty(key);
     }
 
     @Override
+    @Deprecated
     public String getProperty(String pathWithBundle, String key, String defaultValue) {
         return allProperties.get(pathWithBundle).getProperty(key, defaultValue);
     }
     
     @Override
+    @Deprecated
     public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException {
         return System.getProperty(key);
     }
 
     @Override
+    @Deprecated
     public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
         if (this.getSystemProperty(key) == null) {
             return Boolean.FALSE;
@@ -67,6 +72,7 @@ public class LibProperties implements ILibProperties {
     }
 
     @Override
+    @Deprecated
     public void register(String pathWithBundle) {
         if (allProperties.containsKey(pathWithBundle)) {
             return;
@@ -86,6 +92,7 @@ public class LibProperties implements ILibProperties {
     }
 
     @Override
+    @Deprecated
     public void register(ArrayList<String> pathWithBundles) {
         pathWithBundles.forEach(pathWithBundle -> {
             this.register(pathWithBundle);
@@ -93,6 +100,7 @@ public class LibProperties implements ILibProperties {
     }
 
     @Override
+    @Deprecated
     public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException {
         if (unnamed.isEmpty()) {
             return;
@@ -109,6 +117,7 @@ public class LibProperties implements ILibProperties {
     }
 
     @Override
+    @Deprecated
     public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
         System.setProperty(key, value);
     }
