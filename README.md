@@ -4,6 +4,12 @@ Lib-Properties
 Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp; 
 [Maven] desktop application.
 
+_Image:_ [UML] Lib-Properties  
+![UML-diagram_Lib-Properties_v0.5.0_2017-07-17_21-17.png][UML-diagram_Lib-Properties_v0.5.0_2017-07-17_21-17]
+
+> __Hint__  
+> The `UML` diagram is created with the `Online Modeling Platform` [GenMyModel].
+
 Current `version` is `0.4.1` (05.24.2017).
 
 
@@ -367,10 +373,17 @@ You can reach me under <peter.rogge@yahoo.de>.
 
 
 
+[//]: # (Images)
+[UML-diagram_Lib-Properties_v0.5.0_2017-07-17_21-17]:https://user-images.githubusercontent.com/8161815/28286098-5c85b802-6b37-11e7-8db0-47eed1156c43.png
+
+
+
+
 [//]: # (Links)
 [Eclipse]:https://www.eclipse.org/
 [FXML]:http://docs.oracle.com/javafx/2/fxml_get_started/jfxpub-fxml_get_started.htm
 [General Public License 3.0]:http://www.gnu.org/licenses/gpl-3.0.en.html
+[GenMyModel]:https://www.genmymodel.com/
 [IntelliJ IDEA]:http://www.jetbrains.com/idea/
 [Issue]:https://github.com/Naoghuman/lib-preferences/issues
 [JavaDoc]:http://www.oracle.com/technetwork/java/javase/documentation/index-jsp-135444.html
