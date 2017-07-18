@@ -401,5 +401,6 @@ You can reach me under <peter.rogge@yahoo.de>.
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
 [Release v0.4.1 (05.24.2017)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.4.1
+[UML]:https://en.wikipedia.org/wiki/Unified_Modeling_Language
 
 
