@@ -1,8 +1,8 @@
 Lib-Properties
 ===
 
-Lib-Properties is a library for `easy` loading [properties] in a [JavaFX] &amp; 
-[Maven] desktop application.
+Lib-Properties is a library for `easy` loading [properties] files in a [JavaFX] 
+&amp; [Maven] desktop application.
 
 _Image:_ [UML] Lib-Properties  
 ![UML-diagram_Lib-Properties_v0.5.0_2017-07-17_21-17.png][UML-diagram_Lib-Properties_v0.5.0_2017-07-17_21-17]
