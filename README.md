@@ -10,7 +10,7 @@ _Image:_ [UML] Lib-Properties
 > __Hint__  
 > The `UML` diagram is created with the `Online Modeling Platform` [GenMyModel].
 
-Current `version` is `0.5.0` (07.20.2017 / MM.dd.yyyy).
+Current `version` is `0.5.1` (01.02.2018 / MM.dd.yyyy).
 
 
 
@@ -132,7 +132,7 @@ public interface SimpleProperties
 
 ```java
 /**
- * Searche for the property with the specified key in this property list.<br>
+ * Searches for the property with the specified key in this property list.<br>
  * If the key is not found in this property list, the default property list,
  * and its defaults, recursively, are then checked. The method returns
  * {@code null} if the property is not found.
@@ -287,11 +287,9 @@ public void setSystemProperty(final String key, final String value) throws Secur
 Download<a name="Download" />
 ---
 
-Current `version` is `0.5.0`. Main points in this release are:
-* This is a major update.
-* Create new package structure to reflect my new library conventions.
-* Deprecated all old classes and interfaces.
-* Update the ReadMe to reflect the changes.
+Current `version` is `0.5.1`. Main points in this release are:
+* This is a minor update.
+* Update dependencies and the documentation.
 
 **Maven coordinates**  
 ```xml
@@ -299,13 +297,13 @@ Current `version` is `0.5.0`. Main points in this release are:
     <dependency>
         <groupId>com.github.naoghuman</groupId>
         <artifactId>lib-properties</artifactId>
-        <version>0.5.0</version>
+        <version>0.5.1</version>
     </dependency>
 </dependencies>
 ```
 
 Download:
-* [Release v0.5.0 (07.20.2017 / MM.dd.yyyy)]
+* [Release v0.5.1 (01.02.2018 / MM.dd.yyyy)]
 
 An overview about all existings releases can be found here:
 * [Overview from all releases in Lib-Properties]
@@ -316,10 +314,10 @@ Requirements<a name="Requirements" />
 ---
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [lib-properties-0.5.0.jar](#Installation).
+* The library [lib-properties-0.5.1.jar](#Installation).
 
 In the library are following libraries registered as dependencies:
-* The library [lib-logger-0.5.0.jar](#Installation).
+* The library [lib-logger-0.5.1.jar](#Installation).
   * Included in `Lib-Logger` is the library [log4j-api-2.8.2.jar].
   * Included is `Lib-Logger` is the library [log4j-core-2.8.2.jar].
 
@@ -402,7 +400,7 @@ You can reach me under <peter.rogge@yahoo.de>.
 [Overview from all releases in Lib-Properties]:https://github.com/Naoghuman/lib-properties/releases
 [Pull Request]:https://help.github.com/articles/using-pull-requests
 [properties]:http://en.wikipedia.org/wiki/.properties
-[Release v0.5.0 (07.20.2017 / MM.dd.yyyy)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.5.0
+[Release v0.5.1 (01.02.2018 / MM.dd.yyyy)]:https://github.com/Naoghuman/lib-properties/releases/tag/v0.5.1
 [UML]:https://en.wikipedia.org/wiki/Unified_Modeling_Language
 
 

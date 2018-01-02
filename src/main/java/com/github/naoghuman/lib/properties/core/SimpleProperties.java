@@ -35,7 +35,7 @@ import java.util.List;
 public interface SimpleProperties {
     
     /**
-     * Searche for the property with the specified key in this property list.<br>
+     * Searches for the property with the specified key in this property list.<br>
      * If the key is not found in this property list, the default property list,
      * and its defaults, recursively, are then checked. The method returns
      * {@code null} if the property is not found.

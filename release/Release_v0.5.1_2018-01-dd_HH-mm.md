@@ -6,8 +6,8 @@ Lib-Properties is a library for `easy` loading [properties] files in a [JavaFX]
 
 
 #### Summary
-* ...
-* ...
+* This is a minor update.
+* Update dependencies and the documentation.
 
 
 
@@ -20,6 +20,7 @@ Lib-Properties is a library for `easy` loading [properties] files in a [JavaFX]
 
 
 #### Enhancement
+#27 [documentation] Update the ReadMe to new v0.5.1.
 
 
 
