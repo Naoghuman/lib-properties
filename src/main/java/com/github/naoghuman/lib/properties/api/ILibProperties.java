@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The <code>Interface</code> for the class {@link com.github.naoghuman.lib.properties.LibProperties}.<br />
+ * The <code>Interface</code> for the class {@link com.github.naoghuman.lib.properties.LibProperties}.<br>
  * Over the facade {@link com.github.naoghuman.lib.properties.api.PropertiesFacade} 
  * you can  access the methods in this <code>Interface</code>.
  *
@@ -33,7 +33,7 @@ import java.util.List;
 public interface ILibProperties {
     
     /**
-     * Searches for the property with the specified key in this property list.<br />
+     * Searches for the property with the specified key in this property list.<br>
      * If the key is not found in this property list, the default property list,
      * and its defaults, recursively, are then checked. The method returns
      * {@code null} if the property is not found.
@@ -46,7 +46,7 @@ public interface ILibProperties {
     public String getProperty(String pathWithBundle, String key);
     
     /**
-     * Searches for the property with the specified key in this property list.<br />
+     * Searches for the property with the specified key in this property list.<br>
      * If the key is not found in this property list, the default property list,
      * and its defaults, recursively, are then checked. The method returns the
      * default value argument if the property is not found.
@@ -111,9 +111,9 @@ public interface ILibProperties {
     public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
-     * Register with this method your <code>.properties</code> file.<br />
-     * The parameter <code>pathWithBundle</code> have the format:<br />
-     * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
+     * Register with this method your <code>.properties</code> file.<br>
+     * The parameter <code>pathWithBundle</code> have the format:<br>
+     * <code>/your/package/path/to/your/FileToLoad.properties</code><br><br>
      * 
      * The file should be in the <code>src/main/resources</code> folder with the 
      * previous named packaged structure in the specific maven module.
@@ -125,9 +125,9 @@ public interface ILibProperties {
     public void register(String pathWithBundle);
     
     /**
-     * Register with this method your <code>.properties</code> files.<br />
-     * The parameter in <code>pathWithBundles</code> should have the format:<br />
-     * <code>/your/package/path/to/your/FileToLoad.properties</code><br /><br />
+     * Register with this method your <code>.properties</code> files.<br>
+     * The parameter in <code>pathWithBundles</code> should have the format:<br>
+     * <code>/your/package/path/to/your/FileToLoad.properties</code><br><br>
      * 
      * The files should be in the <code>src/main/resources</code> folder with the 
      * previous named packaged structure in the specific maven module.

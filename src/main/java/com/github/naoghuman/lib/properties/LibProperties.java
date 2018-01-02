@@ -27,7 +27,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
 
 /**
- * The implementation from the Interface {@link com.github.naoghuman.lib.properties.api.ILibProperties}.<br />
+ * The implementation from the Interface {@link com.github.naoghuman.lib.properties.api.ILibProperties}.<br>
  * Access to this class is over the facade {@link com.github.naoghuman.lib.properties.api.PropertiesFacade}.
  * 
  * @author PRo
