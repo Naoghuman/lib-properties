@@ -4,7 +4,7 @@
     
     <groupId>com.github.naoghuman</groupId>
     <artifactId>lib-properties</artifactId>
-    <version>0.5.1-SNAPSHOT</version> <!-- -SNAPSHOT -->
+    <version>0.5.1-SNAPSHOT</version> <!-- -SNAPSHOT -PRERELEASE -->
     <packaging>jar</packaging>
     <description>Lib-Properties is a library for easy loading properties files in a JavaFX &amp; Maven desktop application. See https://github.com/Naoghuman/lib-properties for more details.</description>
     <name>Lib-Properties</name>
@@ -62,7 +62,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.4</version>
+                <version>3.0.0</version>
                 <configuration>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
@@ -100,7 +100,7 @@
         <dependency>
             <groupId>com.github.naoghuman</groupId>
             <artifactId>lib-logger</artifactId>
-            <version>0.5.0</version>
+            <version>0.5.1</version>
             <type>jar</type>
         </dependency>
     </dependencies>
