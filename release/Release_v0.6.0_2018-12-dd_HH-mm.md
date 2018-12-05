@@ -35,6 +35,7 @@ Lib-Properties is a library for `easy` loading [properties] files in a [JavaFX]
 
 #### Refactoring
 #34 [pom] Update dependencies in pom.xml.
+#26 [deprecated] Remove the deprecated package with all classes and interfaces.
 
 
 
