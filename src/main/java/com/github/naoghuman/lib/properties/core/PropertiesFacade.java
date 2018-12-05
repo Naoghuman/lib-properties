@@ -17,6 +17,7 @@
 package com.github.naoghuman.lib.properties.core;
 
 import com.github.naoghuman.lib.properties.internal.DefaultSimpleProperties;
+import com.github.naoghuman.lib.properties.internal.DefaultSimplePropertiesValidator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -57,42 +58,64 @@ public final class PropertiesFacade implements SimpleProperties {
     }
 
     @Override
-    public String getProperty(String pathWithBundle, String key) {
+    public String getProperty(final String pathWithBundle, final String key) {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(pathWithBundle);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        
         return properties.getProperty(pathWithBundle, key);
     }
 
     @Override
-    public String getProperty(String pathWithBundle, String key, String defaultValue) {
+    public String getProperty(final String pathWithBundle, final String key, final String defaultValue) {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(pathWithBundle);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(defaultValue);
+        
         return properties.getProperty(pathWithBundle, key, defaultValue);
     }
 
     @Override
-    public String getSystemProperty(String key) throws SecurityException, NullPointerException, IllegalArgumentException {
+    public String getSystemProperty(final String key) throws SecurityException, NullPointerException, IllegalArgumentException {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        
         return properties.getSystemProperty(key);
     }
 
     @Override
-    public Boolean isSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+    public Boolean isSystemProperty(final String key, final String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(value);
+        
         return properties.isSystemProperty(key, value);
     }
 
     @Override
-    public void register(String pathWithBundle) {
+    public void register(final String pathWithBundle) {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(pathWithBundle);
+        
         properties.register(pathWithBundle);
     }
 
     @Override
-    public void register(ArrayList<String> pathWithBundles) {
+    public void register(final ArrayList<String> pathWithBundles) {
+        DefaultSimplePropertiesValidator.requireNonNull(pathWithBundles);
+        
         properties.register(pathWithBundles);
     }
 
     @Override
-    public void registerSystemProperties(String regex, List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException {
+    public void registerSystemProperties(final String regex, final List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(regex);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(unnamed);
+        
         properties.registerSystemProperties(regex, unnamed);
     }
 
     @Override
-    public void setSystemProperty(String key, String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+    public void setSystemProperty(final String key, final String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(value);
+        
         properties.setSystemProperty(key, value);
     }
     

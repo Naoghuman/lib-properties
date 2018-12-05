@@ -42,21 +42,33 @@ public final class DefaultSimpleProperties implements SimpleProperties {
 
     @Override
     public String getProperty(final String pathWithBundle, final String key) {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(pathWithBundle);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        
         return allProperties.get(pathWithBundle).getProperty(key);
     }
 
     @Override
     public String getProperty(final String pathWithBundle, final String key, final String defaultValue) {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(pathWithBundle);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(defaultValue);
+        
         return allProperties.get(pathWithBundle).getProperty(key, defaultValue);
     }
     
     @Override
     public String getSystemProperty(final String key) throws SecurityException, NullPointerException, IllegalArgumentException {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        
         return System.getProperty(key);
     }
 
     @Override
     public Boolean isSystemProperty(final String key, final String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(value);
+        
         if (this.getSystemProperty(key) == null) {
             return Boolean.FALSE;
         }
@@ -70,6 +82,8 @@ public final class DefaultSimpleProperties implements SimpleProperties {
 
     @Override
     public void register(final String pathWithBundle) {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(pathWithBundle);
+        
         if (allProperties.containsKey(pathWithBundle)) {
             return;
         }
@@ -89,6 +103,8 @@ public final class DefaultSimpleProperties implements SimpleProperties {
 
     @Override
     public void register(final ArrayList<String> pathWithBundles) {
+        DefaultSimplePropertiesValidator.requireNonNull(pathWithBundles);
+        
         pathWithBundles.forEach(pathWithBundle -> {
             this.register(pathWithBundle);
         });
@@ -96,6 +112,9 @@ public final class DefaultSimpleProperties implements SimpleProperties {
 
     @Override
     public void registerSystemProperties(final String regex, final List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(regex);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(unnamed);
+        
         if (unnamed.isEmpty()) {
             return;
         }
@@ -112,6 +131,9 @@ public final class DefaultSimpleProperties implements SimpleProperties {
 
     @Override
     public void setSystemProperty(final String key, final String value) throws SecurityException, NullPointerException, IllegalArgumentException {
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(key);
+        DefaultSimplePropertiesValidator.requireNonNullAndNotEmpty(value);
+        
         System.setProperty(key, value);
     }
     
