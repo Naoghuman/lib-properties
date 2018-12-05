@@ -30,9 +30,11 @@ import java.util.Optional;
  * The usage from the facade is preferred over the directly usage through instanziation
  * from the {@code Class} {@link com.github.naoghuman.lib.properties.internal.DefaultSimpleProperties}.
  *
- * @author Naoghuman
- * @see    com.github.naoghuman.lib.properties.core.SimpleProperties
- * @see    com.github.naoghuman.lib.properties.internal.DefaultSimpleProperties
+ * @since   0.5.1
+ * @version 0.6.0
+ * @author  Naoghuman
+ * @see     com.github.naoghuman.lib.properties.core.SimpleProperties
+ * @see     com.github.naoghuman.lib.properties.internal.DefaultSimpleProperties
  */
 public final class PropertiesFacade implements SimpleProperties {
     
@@ -41,7 +43,10 @@ public final class PropertiesFacade implements SimpleProperties {
     /**
      * Returns a singleton instance from the {@code Class} {@code PropertiesFacade}.
      * 
-     * @return a singleton instance from the {@code Class} {@code PropertiesFacade}.
+     * @return  a singleton instance from the {@code Class} {@code PropertiesFacade}.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public static final PropertiesFacade getDefault() {
         return instance.get();

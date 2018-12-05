@@ -30,6 +30,7 @@ Lib-Properties is a library for `easy` loading [properties] files in a [JavaFX]
 
 
 #### Documentation
+#35 [doc] Add the JavaDoc flags 'since' and 'version' to all classes and interfaces.
 #29 [doc] Add badges from img.shield.io to the ReadMe.md.
 
 

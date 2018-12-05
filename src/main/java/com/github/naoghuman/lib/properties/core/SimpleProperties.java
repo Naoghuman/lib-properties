@@ -28,9 +28,11 @@ import java.util.List;
  * preferred way (and not the usage through instanziation from the {@code Class} 
  * {@code DefaultSimpleProperties}).
  *
- * @author Naoghuman
- * @see    com.github.naoghuman.lib.properties.core.PropertiesFacade
- * @see    com.github.naoghuman.lib.properties.internal.DefaultSimpleProperties
+ * @since   0.5.1
+ * @version 0.6.0
+ * @author  Naoghuman
+ * @see     com.github.naoghuman.lib.properties.core.PropertiesFacade
+ * @see     com.github.naoghuman.lib.properties.internal.DefaultSimpleProperties
  */
 public interface SimpleProperties {
     
@@ -40,10 +42,14 @@ public interface SimpleProperties {
      * and its defaults, recursively, are then checked. The method returns
      * {@code null} if the property is not found.
      * 
-     * @param pathWithBundle The properties where value is stored.
-     * @param key            The property key.
-     * @return               The value in this property list with the specified 
-     *                       key value.
+     * @param   pathWithBundle The properties where value is stored.
+     * @param   key            The property key.
+     * @return                 The value in this property list with the specified key value.
+     * @throws  NullPointerException     if ({@code pathWithBundle} || {@code key}) is NULL.
+     * @throws  IllegalArgumentException if ({@code pathWithBundle} || {@code key}) is EMPTY.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public String getProperty(final String pathWithBundle, final String key);
     
@@ -53,12 +59,16 @@ public interface SimpleProperties {
      * and its defaults, recursively, are then checked. The method returns the
      * default value argument if the property is not found.
      * 
-     * @param pathWithBundle The properties where value is stored.
-     * @param key            The property key.
-     * @param defaultValue   If the key-value pair not stored in the properties  
-     *                       then the {@code defaultValue} will be returned.
-     * @return               The value in this property list with the specified 
-     *                       key value.
+     * @param   pathWithBundle The properties where value is stored.
+     * @param   key            The property key.
+     * @param   defaultValue   If the key-value pair not stored in the properties  
+     *                         then the {@code defaultValue} will be returned.
+     * @return                 The value in this property list with the specified key value.
+     * @throws  NullPointerException     if ({@code pathWithBundle} || {@code key} || {@code defaultValue}) is NULL.
+     * @throws  IllegalArgumentException if ({@code pathWithBundle} || {@code key} || {@code defaultValue}) is EMPTY.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public String getProperty(final String pathWithBundle, final String key, final String defaultValue);
     
@@ -73,15 +83,18 @@ public interface SimpleProperties {
      * is first created and initialized in the same manner as for the {@code getProperties} 
      * method.
      * 
-     * @param key The name of the system property.
-     * @return    The string value of the system property, or {@code null} if 
-     *            there is no property with that key.
-     * @throws SecurityException If a security manager exists and its 
-     *                           {@code checkPropertyAccess} method doesn't allow 
-     *                           access to the specified system property.
-     * @throws NullPointerException     If {@code key} is {@code null}.
-     * @throws IllegalArgumentException If {@code key} is empty.
-     * @see #setSystemProperty(java.lang.String, java.lang.String)
+     * @param   key The name of the system property.
+     * @return      The string value of the system property, or {@code null} if 
+     *              there is no property with that key.
+     * @throws  SecurityException If a security manager exists and its 
+     *                            {@code checkPropertyAccess} method doesn't allow 
+     *                            access to the specified system property.
+     * @throws  NullPointerException     if ({@code key}) is NULL.
+     * @throws  IllegalArgumentException if ({@code key}) is EMPTY.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
+     * @see     #setSystemProperty(java.lang.String, java.lang.String)
      */
     public String getSystemProperty(final String key) throws SecurityException, NullPointerException, IllegalArgumentException;
     
@@ -96,62 +109,78 @@ public interface SimpleProperties {
      * is first created and initialized in the same manner as for the {@code getProperties} 
      * method.
      * 
-     * @param key   The name of the system property.
-     * @param value The value which should checked against the value from the system.
-     * @return      If the value from the key equals the parameter value.
-     * @throws SecurityException  If a security manager exists and its 
-     *         {@code checkPropertyAccess} method doesn't allow access to the 
-     *         specified system property.
-     * @throws NullPointerException     If {@code key}is {@code null}.
-     * @throws IllegalArgumentException If {@code key} is empty.
-     * @see #getSystemProperty(java.lang.String)
-     * @see #setSystemProperty(java.lang.String, java.lang.String)
+     * @param   key   The name of the system property.
+     * @param   value The value which should checked against the value from the system.
+     * @return        If the value from the key equals the parameter value.
+     * @throws  SecurityException  If a security manager exists and its 
+     *          {@code checkPropertyAccess} method doesn't allow access to the 
+     *          specified system property.
+     * @throws  NullPointerException     if ({@code key} || {@code value}) is NULL.
+     * @throws  IllegalArgumentException if ({@code key} || {@code value}) is EMPTY.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
+     * @see     #getSystemProperty(java.lang.String)
+     * @see     #setSystemProperty(java.lang.String, java.lang.String)
      */
     public Boolean isSystemProperty(final String key, final String value) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
      * Register with this method your {@code .properties} file.<br>
-     * The parameter {@code pathWithBundle} have the format:<br>
+     * The parameter {@code pathWithBundle} have the format:
      * {@code /your/package/path/to/your/FileToLoad.properties}.
      * <p>
      * The file should be in the {@code src/main/resources} folder with the 
      * previous named packaged structure in the specific maven module.
      * 
-     * @param pathWithBundle The properties which should be register. If the 
-     *                       properties always register nothing happen.
+     * @param   pathWithBundle The properties which should be register. If the 
+     *                         properties always register nothing happen.
+     * @throws  NullPointerException     if ({@code pathWithBundle}) is NULL.
+     * @throws  IllegalArgumentException if ({@code pathWithBundle}) is EMPTY.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public void register(final String pathWithBundle);
     
     /**
      * Register with this method your {@code .properties} files.<br>
-     * The parameter in {@code pathWithBundles} should have the format:<br>
+     * The parameter {@code pathWithBundle} have the format:
      * {@code /your/package/path/to/your/FileToLoad.properties}.
      * <p>
      * The files should be in the {@code src/main/resources} folder with the 
      * previous named packaged structure in the specific maven module.
      * 
-     * @param pathWithBundles The properties which should be register. If the 
-     *                        properties always register nothing happen.
+     * @param   pathWithBundles The properties which should be register. If the 
+     *                          properties always register nothing happen.
+     * @throws  NullPointerException if ({@code pathWithBundles}) is NULL.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public void register(final ArrayList<String> pathWithBundles);
     
     /**
-     * Register the given {@link java.util.List} as {@code System}properties.
+     * Register the given {@link java.util.List} as system properties.
+     * <p>
      * Every entry in the {@link java.util.List} will splitted with the regex to 
      * a {@code System} property pair (key, value).
      * 
-     * @param regex   The delimiting regular expression.
-     * @param unnamed The {@link java.util.List} which will splitted.
-     * @throws SecurityException If a security manager exists and its 
-     *         {@code checkPropertyAccess} method doesn't allow access to the 
-     *         specified system property.
-     * @throws NullPointerException     If {@code key}or {@code value} is {@code null}.
-     * @throws IllegalArgumentException If {@code key}is empty.
+     * @param   regex   The delimiting regular expression.
+     * @param   unnamed The {@link java.util.List} which will splitted.
+     * @throws  SecurityException If a security manager exists and its 
+     *          {@code checkPropertyAccess} method doesn't allow access to the 
+     *          specified system property.
+     * @throws  NullPointerException     if ({@code regex} || {@code unnamed}) is NULL.
+     * @throws  IllegalArgumentException if ({@code regex}) is EMPTY.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
      */
     public void registerSystemProperties(final String regex, final List<String> unnamed) throws SecurityException, NullPointerException, IllegalArgumentException;
     
     /**
-     * Allowed access to the {@code System} properties. Sets the system property 
+     * Allowed access to the {@code System} properties. Sets the system propertie
      * indicated by the specified key.
      * <p>
      * First, if a security manager exists, its {@code SecurityManager.checkPermission}
@@ -159,14 +188,17 @@ public interface SimpleProperties {
      * permission. This may result in a SecurityException being thrown. If no 
      * exception is thrown, the specified property is set to the given value.
      * 
-     * @param key   The name of the system property.
-     * @param value The value of the system property.
-     * @throws SecurityException If a security manager exists and its 
-     *         {@code checkPropertyAccess} method doesn't allow access to the 
-     *         specified system property.
-     * @throws NullPointerException     If {@code key} or {@code value}is {@code null}.
-     * @throws IllegalArgumentException If {@code key} is empty.
-     * @see #getSystemProperty(java.lang.String)
+     * @param   key   The name of the system property.
+     * @param   value The value of the system property.
+     * @throws  SecurityException If a security manager exists and its 
+     *          {@code checkPropertyAccess} method doesn't allow access to the 
+     *          specified system property.
+     * @throws  NullPointerException     if ({@code key} || {@code value}) is NULL.
+     * @throws  IllegalArgumentException if ({@code key} || {@code value}) is EMPTY.
+     * @since   0.5.1
+     * @version 0.6.0
+     * @author  Naoghuman
+     * @see     #getSystemProperty(java.lang.String)
      */
     public void setSystemProperty(final String key, final String value) throws SecurityException, NullPointerException, IllegalArgumentException;
 

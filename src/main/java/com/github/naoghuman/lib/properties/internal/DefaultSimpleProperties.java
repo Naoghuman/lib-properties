@@ -32,7 +32,9 @@ import javafx.collections.ObservableMap;
  * Access to the methods from this default {@code Implementation} can be done over 
  * the facade {@link com.github.naoghuman.lib.properties.core.PropertiesFacade}.
  * 
- * @author Naoghuman
+ * @since   0.5.1
+ * @version 0.6.0
+ * @author  Naoghuman
  * @see com.github.naoghuman.lib.properties.core.PropertiesFacade
  * @see com.github.naoghuman.lib.properties.core.SimpleProperties
  */
