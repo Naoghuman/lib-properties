@@ -16,6 +16,7 @@ Lib-Properties is a library for `easy` loading [properties] files in a [JavaFX]
 
 
 #### Feature
+#28 [ci] Connect the GitHub project with Travis CI.
 
 
 
