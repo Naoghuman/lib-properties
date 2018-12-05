@@ -32,6 +32,7 @@ Lib-Properties is a library for `easy` loading [properties] files in a [JavaFX]
 
 
 #### Refactoring
+#34 [pom] Update dependencies in pom.xml.
 
 
 
