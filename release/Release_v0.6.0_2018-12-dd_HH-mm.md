@@ -16,6 +16,7 @@ Lib-Properties is a library for `easy` loading [properties] files in a [JavaFX]
 
 
 #### Feature
+#29 [doc] Add badges from img.shield.io to the ReadMe.md.
 #28 [ci] Connect the GitHub project with Travis CI.
 
 
